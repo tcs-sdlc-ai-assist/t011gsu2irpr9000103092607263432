@@ -209,6 +209,22 @@
       "community": 12
     },
     {
+      "id": "frontend_public_images_free_license",
+      "label": "LICENSE.md",
+      "file_type": "document",
+      "source_file": "frontend/public/images/free/LICENSE.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_public_images_free_license_bundled_image_licenses",
+      "label": "Bundled image licenses",
+      "file_type": "document",
+      "source_file": "frontend/public/images/free/LICENSE.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_src_app",
       "label": "App.jsx",
       "file_type": "code",
@@ -1510,6 +1526,16 @@
       "confidence": "EXTRACTED",
       "source_file": "frontend/e2e/theme.spec.js",
       "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_public_images_free_license",
+      "target": "frontend_public_images_free_license_bundled_image_licenses",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/public/images/free/LICENSE.md",
+      "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4696,10 +4722,10 @@
     }
   ],
   "metadata": {
-    "built_at": "2026-09-03T10:37:36.249102+00:00",
+    "built_at": "2026-09-03T10:40:48.777612+00:00",
     "version": "graph_update-v1",
     "codebase_root": "C:\\Users\\Radheya\\Desktop\\sdlc_core\\mkt-nxs-project\\sdlc-api\\scripts\\developer_brownfield_smoke_out\\developer_brownfield_smoke\\dev-bf-smoke-20260903-095149-f5e8\\developer",
     "force": true,
-    "files_scanned": 43
+    "files_scanned": 44
   }
 }
