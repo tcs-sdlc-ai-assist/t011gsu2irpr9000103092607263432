@@ -1,3 +1,41 @@
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("/fonts/lexend-deca.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    min-height: 100dvh;
+    background: #f4f4f7;
+    font-family: "Lexend Deca", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .dark body {
+    background: #191b1f;
+  }
+
+  :where(button, a):focus-visible {
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
