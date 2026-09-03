@@ -6,12 +6,19 @@ WriteSpace is a responsive, local-first writing SPA for registering a local acco
 
 ## Features
 
-- Public landing page with recent-story previews
+- NolanAI-inspired cinematic visual system with self-hosted Lexend Deca, charcoal surfaces, restrained electric-blue actions, and accessible light/dark themes
+- Persistent sun/moon theme control in public and authenticated navigation, applied before React renders to avoid a theme flash
+- Public landing page with an asymmetric image-led hero and recent-story previews
 - Local account registration and sign-in
 - Protected story list, reader, and create/edit/delete workflow
+- Optional cover and gallery authoring using 10 bundled, attributed free images or validated uploads up to 500 KB each
+- Lazy cover/gallery rendering, safe placeholders, and compatibility with legacy posts that have no image fields
+- Exactly three fixed-date sample posts on a genuinely empty first run, without reseeding after deletion or overwriting upgraded installs
 - Owner and Admin post-management checks
 - Demo Admin dashboard and local user management
-- Responsive navigation: a compact menu on smaller screens, with stacked content below the mobile breakpoint, two-column story cards at medium widths, and three columns at large widths
+- Responsive pill navigation, mobile workflow surfaces, and computed-style browser coverage across both themes
+
+The bundled image catalogue is documented in `frontend/public/images/free/LICENSE.md`. The bundled Lexend Deca font provenance and SIL Open Font License reference are documented in `frontend/public/fonts/LICENSE.md`. No remote image or font service is used at runtime.
 
 ## Routes
 
@@ -61,20 +68,27 @@ cd frontend
 node node_modules/vitest/vitest.mjs run src/integration/AppFlow.test.jsx
 ```
 
-Run browser E2E specifications (the Playwright configuration starts a local Vite server at `127.0.0.1:4173`):
+Install the Playwright browser once, then run all browser E2E specifications. The Playwright configuration starts a local Vite server at `127.0.0.1:4173` with one worker:
 
 ```sh
 cd frontend
+node node_modules/@playwright/test/cli.js install chromium
 node node_modules/@playwright/test/cli.js test --config playwright.config.js
 ```
 
+The E2E suite covers authentication, CRUD, administration, dark surfaces, theme persistence, image authoring/rendering, first-run seeding, visual-reference computed styles, responsive navigation, and browser console errors. Human-review screenshots are written under `frontend/test-results/` and are intentionally ignored by Git.
+
 ## Browser-local storage schemas
 
-WriteSpace stores JSON arrays or objects under these keys:
+WriteSpace stores JSON arrays, objects, and flags under these keys:
 
-- `writespace_users`: array of local account records: `{ id, displayName, username, password, role }`.
+- `writespace_users`: array of local account records: `{ id, displayName, username, password, role, createdAt? }`.
 - `writespace_session`: current public session: `{ userId, username, displayName, role }`; it intentionally omits the password.
-- `writespace_posts`: array of stories: `{ id, title, content, authorId, authorName, authorRole, createdAt }`.
+- `writespace_posts`: array of stories: `{ id, title, content, coverImage, gallery, authorId, authorName, authorRole, createdAt }`. `coverImage` is an optional local path or data URL; `gallery` is an optional array of local paths/data URLs. Missing fields remain valid for legacy records.
+- `writespace_theme`: `light` or `dark`; missing, invalid, or unreadable values safely resolve to light.
+- `writespace_seeded`: string flag `true` after first-run initialization is evaluated.
+
+Uploaded images are converted to base64 data URLs and each file is rejected above 500 KB. Browser localStorage has a small implementation-dependent quota, so many uploads can exhaust it; save failures remain visible and do not silently discard existing values.
 
 Clearing site data, using a different browser profile, or using another device removes or separates this local data. There is no synchronization, backup, migration, or account recovery.
 

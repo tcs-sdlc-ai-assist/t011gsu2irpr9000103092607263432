@@ -17,6 +17,16 @@ describe('authentication helpers', () => {
     });
   });
 
+  it('authenticates a normalized stored user with a password-free session shape', () => {
+    localStorage.setItem('writespace_users', JSON.stringify([{
+      id: 'user-1', username: 'Writer', displayName: 'Local Writer', password: 'correct', role: 'user',
+    }]));
+
+    expect(authenticate(' writer ', 'correct')).toEqual({
+      userId: 'user-1', username: 'Writer', displayName: 'Local Writer', role: 'user',
+    });
+  });
+
   it('fails authentication when stored credentials do not match', () => {
     localStorage.setItem('writespace_users', JSON.stringify([{
       id: 'user-1', username: 'writer', displayName: 'Writer', password: 'correct', role: 'user',
@@ -45,5 +55,28 @@ describe('authentication helpers', () => {
     expect(getSession()).toEqual(session);
     expect(clearSession()).toBe(true);
     expect(getSession()).toBeNull();
+  });
+
+  it('returns false without persisting when session storage writes throw', () => {
+    const session = { userId: 'user-1', username: 'writer', displayName: 'Writer', role: 'user' };
+    vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
+      throw new Error('quota exceeded');
+    });
+
+    expect(setSession(session)).toBe(false);
+    expect(localStorage.getItem('writespace_session')).toBeNull();
+    vi.restoreAllMocks();
+  });
+
+  it('returns false and preserves the session when storage removal throws', () => {
+    const session = { userId: 'user-1', username: 'writer', displayName: 'Writer', role: 'user' };
+    localStorage.setItem('writespace_session', JSON.stringify(session));
+    vi.spyOn(Storage.prototype, 'removeItem').mockImplementation(() => {
+      throw new Error('storage locked');
+    });
+
+    expect(clearSession()).toBe(false);
+    expect(JSON.parse(localStorage.getItem('writespace_session'))).toEqual(session);
+    vi.restoreAllMocks();
   });
 });

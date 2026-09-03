@@ -11,6 +11,9 @@ import ReadBlog from "./pages/ReadBlog";
 import RegisterPage from "./pages/RegisterPage";
 import WriteBlog from "./pages/WriteBlog";
 import { getSession } from "./utils/auth";
+import { seedIfFirstRun } from "./utils/seed";
+
+seedIfFirstRun();
 
 /**
  * Render a temporary protected page for a later WriteSpace feature route.

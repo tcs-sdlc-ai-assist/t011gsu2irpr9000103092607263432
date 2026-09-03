@@ -1,10 +1,13 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   getPosts,
+  getSeedFlag,
   getUsers,
   POSTS_KEY,
   savePosts,
   saveUsers,
+  SEED_KEY,
+  setSeedFlag,
   USERS_KEY,
 } from './storage';
 
@@ -60,5 +63,37 @@ describe('local storage adapters', () => {
     expect(saveUsers([{ id: 'user-2' }])).toBe(false);
     expect(JSON.parse(localStorage.getItem(POSTS_KEY))).toEqual([{ id: 'post-1' }]);
     expect(JSON.parse(localStorage.getItem(USERS_KEY))).toEqual([{ id: 'user-1' }]);
+  });
+
+  it('returns false for an absent or invalid seed marker', () => {
+    expect(getSeedFlag()).toBe(false);
+    localStorage.setItem(SEED_KEY, 'TRUE');
+    expect(getSeedFlag()).toBe(false);
+    localStorage.setItem(SEED_KEY, '{broken');
+    expect(getSeedFlag()).toBe(false);
+  });
+
+  it('returns true only for the exact persisted seed marker', () => {
+    localStorage.setItem(SEED_KEY, 'true');
+
+    expect(getSeedFlag()).toBe(true);
+  });
+
+  it('writes the exact seed marker and reports success', () => {
+    expect(setSeedFlag()).toBe(true);
+    expect(localStorage.getItem(SEED_KEY)).toBe('true');
+  });
+
+  it('fails safely when seed marker reads or writes throw', () => {
+    vi.spyOn(Storage.prototype, 'getItem').mockImplementation(() => {
+      throw new Error('storage disabled');
+    });
+    expect(getSeedFlag()).toBe(false);
+    vi.restoreAllMocks();
+    vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
+      throw new Error('quota exceeded');
+    });
+
+    expect(setSeedFlag()).toBe(false);
   });
 });

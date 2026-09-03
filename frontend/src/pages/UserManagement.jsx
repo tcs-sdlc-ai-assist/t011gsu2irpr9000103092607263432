@@ -195,7 +195,7 @@ export default function UserManagement() {
     record.isDefault ? (
       <button
         type="button"
-        className="rounded-md border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100"
+        className="rounded-full border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 transition-colors duration-200 hover:bg-slate-100 active:scale-[0.98] dark:border-slate-600 dark:text-slate-100 dark:hover:bg-slate-700 dark:!border-white/10 dark:hover:!bg-ink-800"
         onClick={() => handleDelete(record.id)}
       >
         Delete
@@ -203,7 +203,7 @@ export default function UserManagement() {
     ) : (
       <button
         type="button"
-        className="rounded-md border border-rose-300 px-3 py-2 text-sm font-semibold text-rose-700 hover:bg-rose-50"
+        className="rounded-full border border-rose-300 px-3 py-2 text-sm font-semibold text-rose-700 transition-colors duration-200 hover:bg-rose-50 active:scale-[0.98] dark:border-rose-500 dark:text-rose-300 dark:hover:bg-rose-950"
         onClick={() => handleDelete(record.id)}
       >
         Delete
@@ -212,32 +212,32 @@ export default function UserManagement() {
 
   return (
     <AuthenticatedShell session={session}>
-      <section className="mx-auto max-w-6xl px-5 py-12 sm:px-8">
+      <section className="mx-auto max-w-6xl px-5 py-16 text-ink-950 dark:bg-slate-900 dark:text-slate-100 dark:!bg-ink-950 sm:px-8 sm:py-20">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-700">
+          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-700 text-signal-600 dark:text-indigo-300 dark:!text-signal-500">
             Administration
           </p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+          <h1 className="mt-2 text-[2.125rem] font-semibold leading-[1.12] tracking-tight text-slate-950 text-ink-950 dark:text-slate-100 sm:text-5xl">
             User management
           </h1>
-          <p className="mt-3 max-w-2xl text-slate-600">
+          <p className="mt-3 max-w-2xl text-slate-600 dark:text-slate-300">
             Create and maintain browser-local WriteSpace accounts.
           </p>
         </div>
 
         <form
-          className="mt-10 rounded-lg border border-slate-200 bg-white p-6 sm:p-8"
+          className="mt-10 rounded-2xl border border-slate-200 border-black/5 bg-white p-6 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:!border-white/10 dark:!bg-ink-900 sm:p-8"
           onSubmit={handleSubmit}
           noValidate
         >
-          <h2 className="text-xl font-semibold tracking-tight text-slate-950">
+          <h2 className="text-xl font-semibold tracking-tight text-slate-950 dark:text-slate-100">
             Add a user
           </h2>
           <div className="mt-6 grid gap-5 md:grid-cols-2">
             <div>
               <label
                 htmlFor="display-name"
-                className="block text-sm font-semibold text-slate-800"
+                className="block text-sm font-semibold text-slate-800 dark:text-slate-100"
               >
                 Display name
               </label>
@@ -251,12 +251,12 @@ export default function UserManagement() {
                 aria-describedby={
                   errors.displayName ? "display-name-error" : undefined
                 }
-                className="mt-2 block w-full rounded-md border border-slate-300 px-3 py-2 text-slate-950 focus:border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                className="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-slate-950 focus:border-indigo-600 focus:border-signal-600 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:ring-signal-100 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:focus:border-indigo-400 dark:focus:ring-indigo-900 dark:!bg-ink-900 dark:focus:!border-signal-500 dark:focus:!ring-signal-600/30"
               />
               {errors.displayName && (
                 <p
                   id="display-name-error"
-                  className="mt-2 text-sm text-rose-700"
+                  className="mt-2 text-sm text-rose-700 dark:text-rose-300"
                   role="alert"
                 >
                   {errors.displayName}
@@ -266,7 +266,7 @@ export default function UserManagement() {
             <div>
               <label
                 htmlFor="username"
-                className="block text-sm font-semibold text-slate-800"
+                className="block text-sm font-semibold text-slate-800 dark:text-slate-100"
               >
                 Username
               </label>
@@ -280,12 +280,12 @@ export default function UserManagement() {
                 aria-describedby={
                   errors.username ? "username-error" : undefined
                 }
-                className="mt-2 block w-full rounded-md border border-slate-300 px-3 py-2 text-slate-950 focus:border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                className="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-slate-950 focus:border-indigo-600 focus:border-signal-600 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:ring-signal-100 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:focus:border-indigo-400 dark:focus:ring-indigo-900 dark:!bg-ink-900 dark:focus:!border-signal-500 dark:focus:!ring-signal-600/30"
               />
               {errors.username && (
                 <p
                   id="username-error"
-                  className="mt-2 text-sm text-rose-700"
+                  className="mt-2 text-sm text-rose-700 dark:text-rose-300"
                   role="alert"
                 >
                   {errors.username}
@@ -295,7 +295,7 @@ export default function UserManagement() {
             <div>
               <label
                 htmlFor="password"
-                className="block text-sm font-semibold text-slate-800"
+                className="block text-sm font-semibold text-slate-800 dark:text-slate-100"
               >
                 Password
               </label>
@@ -310,12 +310,12 @@ export default function UserManagement() {
                 aria-describedby={
                   errors.password ? "password-error" : undefined
                 }
-                className="mt-2 block w-full rounded-md border border-slate-300 px-3 py-2 text-slate-950 focus:border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                className="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-slate-950 focus:border-indigo-600 focus:border-signal-600 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:ring-signal-100 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:focus:border-indigo-400 dark:focus:ring-indigo-900 dark:!bg-ink-900 dark:focus:!border-signal-500 dark:focus:!ring-signal-600/30"
               />
               {errors.password && (
                 <p
                   id="password-error"
-                  className="mt-2 text-sm text-rose-700"
+                  className="mt-2 text-sm text-rose-700 dark:text-rose-300"
                   role="alert"
                 >
                   {errors.password}
@@ -325,7 +325,7 @@ export default function UserManagement() {
             <div>
               <label
                 htmlFor="role"
-                className="block text-sm font-semibold text-slate-800"
+                className="block text-sm font-semibold text-slate-800 dark:text-slate-100"
               >
                 Role
               </label>
@@ -334,7 +334,7 @@ export default function UserManagement() {
                 name="role"
                 value={form.role}
                 onChange={handleChange}
-                className="mt-2 block w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-950 focus:border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                className="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-slate-950 focus:border-indigo-600 focus:border-signal-600 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:ring-signal-100 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:focus:border-indigo-400 dark:focus:ring-indigo-900 dark:!bg-ink-900 dark:focus:!border-signal-500 dark:focus:!ring-signal-600/30"
               >
                 <option value="Admin">Admin</option>
                 <option value="user">user</option>
@@ -344,12 +344,15 @@ export default function UserManagement() {
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <button
               type="submit"
-              className="rounded-md bg-indigo-700 px-5 py-3 text-sm font-semibold text-white hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+              className="rounded-full bg-indigo-700 bg-signal-600 !bg-signal-500 px-5 py-3 text-sm font-semibold text-white transition-transform duration-200 hover:!bg-signal-600 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-signal-600 focus:ring-offset-2 dark:focus:ring-offset-slate-800 dark:focus:!ring-offset-ink-900"
             >
               Create user
             </button>
             {feedback && (
-              <p className="text-sm font-medium text-slate-700" role="status">
+              <p
+                className="text-sm font-medium text-slate-700 dark:text-slate-300"
+                role="status"
+              >
                 {feedback}
               </p>
             )}
@@ -361,52 +364,54 @@ export default function UserManagement() {
             <div>
               <h2
                 id="user-records-heading"
-                className="text-xl font-semibold tracking-tight text-slate-950"
+                className="text-xl font-semibold tracking-tight text-slate-950 dark:text-slate-100"
               >
                 User records
               </h2>
-              <p className="mt-1 text-sm text-slate-600">
+              <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
                 The built-in Admin account is always available.
               </p>
             </div>
             <button
               type="button"
-              className="text-sm font-semibold text-indigo-700 hover:text-indigo-900"
+              className="rounded-full px-3 py-2 text-sm font-semibold text-indigo-700 text-signal-600 transition-colors duration-200 hover:bg-signal-50 hover:text-signal-700 active:scale-[0.98] dark:text-indigo-300 dark:!text-signal-400 dark:hover:!bg-ink-900"
               onClick={refresh}
             >
               Refresh
             </button>
           </div>
-          <table className="mt-5 hidden w-full border-separate border-spacing-0 overflow-hidden rounded-lg border border-slate-200 bg-white text-left md:table">
-            <thead className="bg-slate-50 text-xs uppercase tracking-wide text-slate-600">
+          <table
+            className="mt-5 hidden w-full border-separate border-spacing-0 overflow-hidden rounded-2xl border border-slate-200 border-black/5 bg-white text-left dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:!border-white/10 dark:!bg-ink-900 md:table"
+          >
+            <thead className="bg-slate-50 text-xs uppercase tracking-wide text-slate-600 dark:bg-slate-800 dark:text-slate-300 dark:!bg-ink-800">
               <tr>
                 <th
                   scope="col"
-                  className="border-b border-slate-200 px-5 py-3 font-semibold"
+                  className="border-b border-slate-200 px-5 py-3 font-semibold dark:border-slate-700"
                 >
                   Display name
                 </th>
                 <th
                   scope="col"
-                  className="border-b border-slate-200 px-5 py-3 font-semibold"
+                  className="border-b border-slate-200 px-5 py-3 font-semibold dark:border-slate-700"
                 >
                   Username
                 </th>
                 <th
                   scope="col"
-                  className="border-b border-slate-200 px-5 py-3 font-semibold"
+                  className="border-b border-slate-200 px-5 py-3 font-semibold dark:border-slate-700"
                 >
                   Role
                 </th>
                 <th
                   scope="col"
-                  className="border-b border-slate-200 px-5 py-3 font-semibold"
+                  className="border-b border-slate-200 px-5 py-3 font-semibold dark:border-slate-700"
                 >
                   Created
                 </th>
                 <th
                   scope="col"
-                  className="border-b border-slate-200 px-5 py-3 font-semibold"
+                  className="border-b border-slate-200 px-5 py-3 font-semibold dark:border-slate-700"
                 >
                   Actions
                 </th>
@@ -414,20 +419,23 @@ export default function UserManagement() {
             </thead>
             <tbody>
               {records.map((record) => (
-                <tr key={record.id} className="text-sm text-slate-700">
-                  <td className="border-b border-slate-200 px-5 py-4 font-medium text-slate-950">
+                <tr
+                  key={record.id}
+                  className="text-sm text-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:!bg-ink-900"
+                >
+                  <td className="border-b border-slate-200 px-5 py-4 font-medium text-slate-950 dark:border-slate-700 dark:text-slate-100">
                     {record.displayName || "Unnamed user"}
                   </td>
-                  <td className="border-b border-slate-200 px-5 py-4 font-mono text-xs">
+                  <td className="border-b border-slate-200 px-5 py-4 font-mono text-xs dark:border-slate-700">
                     {record.username || "—"}
                   </td>
-                  <td className="border-b border-slate-200 px-5 py-4">
+                  <td className="border-b border-slate-200 px-5 py-4 dark:border-slate-700">
                     {record.role}
                   </td>
-                  <td className="border-b border-slate-200 px-5 py-4 text-slate-600">
+                  <td className="border-b border-slate-200 px-5 py-4 text-slate-600 dark:border-slate-700 dark:text-slate-400">
                     {record.createdAt || "Unknown date"}
                   </td>
-                  <td className="border-b border-slate-200 px-5 py-4">
+                  <td className="border-b border-slate-200 px-5 py-4 dark:border-slate-700">
                     {renderActions(record)}
                   </td>
                 </tr>
@@ -438,22 +446,22 @@ export default function UserManagement() {
             {records.map((record) => (
               <article
                 key={record.id}
-                className="rounded-lg border border-slate-200 bg-white p-5"
+                className="rounded-2xl border border-slate-200 border-black/5 bg-white p-5 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:!border-white/10 dark:!bg-ink-900"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <h3 className="font-semibold text-slate-950">
+                    <h3 className="font-semibold text-slate-950 dark:text-slate-100">
                       {record.displayName || "Unnamed user"}
                     </h3>
-                    <p className="mt-1 font-mono text-xs text-slate-600">
+                    <p className="mt-1 font-mono text-xs text-slate-600 dark:text-slate-400">
                       {record.username || "—"}
                     </p>
                   </div>
-                  <span className="text-sm font-medium text-slate-700">
+                  <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
                     {record.role}
                   </span>
                 </div>
-                <p className="mt-4 text-sm text-slate-600">
+                <p className="mt-4 text-sm text-slate-600 dark:text-slate-400">
                   Created: {record.createdAt || "Unknown date"}
                 </p>
                 <div className="mt-4">{renderActions(record)}</div>
