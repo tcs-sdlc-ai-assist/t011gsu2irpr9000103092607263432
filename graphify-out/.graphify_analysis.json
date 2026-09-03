@@ -1,47 +1,62 @@
 {
   "communities": {
     "0": [
-      "frontend_src_app",
-      "frontend_src_app_app",
-      "frontend_src_app_protectedplaceholder",
-      "frontend_src_components_authenticatedshell",
-      "frontend_src_components_authenticatedshell_authenticatedshell",
-      "frontend_src_components_avatar",
-      "frontend_src_components_avatar_avatar",
-      "frontend_src_components_protectedroute",
-      "frontend_src_components_protectedroute_protectedroute",
-      "frontend_src_main",
-      "frontend_src_pages_accesspages_test",
-      "frontend_src_pages_accesspages_test_renderat",
-      "frontend_src_pages_loginpage",
-      "frontend_src_pages_loginpage_loginpage",
-      "frontend_src_utils_auth",
-      "frontend_src_utils_auth_authenticate",
-      "frontend_src_utils_auth_clearsession",
-      "frontend_src_utils_auth_getsession",
-      "frontend_src_utils_auth_normalizesession",
-      "frontend_src_utils_auth_session_key",
-      "frontend_src_utils_auth_setsession",
-      "frontend_src_utils_auth_test"
+      "autoprefixer",
+      "frontend_package_devdependencies",
+      "frontend_package_devdependencies_autoprefixer",
+      "frontend_package_devdependencies_jsdom",
+      "frontend_package_devdependencies_playwright_test",
+      "frontend_package_devdependencies_postcss",
+      "frontend_package_devdependencies_prettier",
+      "frontend_package_devdependencies_tailwindcss",
+      "frontend_package_devdependencies_testing_library_jest_dom",
+      "frontend_package_devdependencies_testing_library_react",
+      "frontend_package_devdependencies_testing_library_user_event",
+      "frontend_package_devdependencies_vite",
+      "frontend_package_devdependencies_vitejs_plugin_react",
+      "frontend_package_devdependencies_vitest",
+      "jsdom",
+      "playwright_test",
+      "postcss",
+      "prettier",
+      "tailwindcss",
+      "testing_library_jest_dom",
+      "testing_library_react",
+      "testing_library_user_event",
+      "vite",
+      "vitejs_plugin_react",
+      "vitest"
     ],
     "1": [
-      "frontend_src_components_publicshell",
-      "frontend_src_components_publicshell_publicshell",
-      "frontend_src_pages_registerpage",
-      "frontend_src_pages_registerpage_createuserid",
-      "frontend_src_pages_registerpage_registerpage",
+      "frontend_src_integration_appflow_test",
+      "frontend_src_integration_appflow_test_renderat",
+      "frontend_src_pages_adminpages_test",
+      "frontend_src_pages_adminpages_test_adminsession",
+      "frontend_src_pages_adminpages_test_renderat",
+      "frontend_src_pages_adminpages_test_seedposts",
+      "frontend_src_pages_adminpages_test_seedusers",
+      "frontend_src_pages_usermanagement",
+      "frontend_src_pages_usermanagement_createuserid",
+      "frontend_src_pages_usermanagement_defaultadmin",
+      "frontend_src_pages_usermanagement_normalizeusername",
+      "frontend_src_utils_auth_session_key",
       "frontend_src_utils_storage",
-      "frontend_src_utils_storage_getposts",
       "frontend_src_utils_storage_getusers",
       "frontend_src_utils_storage_posts_key",
       "frontend_src_utils_storage_readarray",
       "frontend_src_utils_storage_saveposts",
       "frontend_src_utils_storage_saveusers",
+      "frontend_src_utils_storage_test",
       "frontend_src_utils_storage_users_key",
       "frontend_src_utils_storage_writearray"
     ],
     "2": [
       "frontend_package",
+      "frontend_package_dependencies",
+      "frontend_package_dependencies_prop_types",
+      "frontend_package_dependencies_react",
+      "frontend_package_dependencies_react_dom",
+      "frontend_package_dependencies_react_router_dom",
       "frontend_package_name",
       "frontend_package_private",
       "frontend_package_scripts",
@@ -49,161 +64,178 @@
       "frontend_package_scripts_dev",
       "frontend_package_scripts_test",
       "frontend_package_type",
-      "frontend_package_version"
-    ],
-    "3": [
-      "frontend_package_dependencies",
-      "frontend_package_dependencies_prop_types",
-      "frontend_package_dependencies_react",
-      "frontend_package_dependencies_react_dom",
-      "frontend_package_dependencies_react_router_dom",
+      "frontend_package_version",
       "prop_types",
       "react",
       "react_dom",
       "react_router_dom"
     ],
-    "4": [
+    "3": [
+      "frontend_src_pages_admindashboard",
+      "frontend_src_pages_admindashboard_admindashboard",
+      "frontend_src_pages_admindashboard_readdashboarddata",
+      "frontend_src_pages_home_home",
       "frontend_src_pages_landingpage",
       "frontend_src_pages_landingpage_landingpage",
+      "frontend_src_pages_readblog_readblog",
+      "frontend_src_pages_writeblog",
+      "frontend_src_pages_writeblog_createpostid",
+      "frontend_src_pages_writeblog_writeblog",
       "frontend_src_utils_blog",
       "frontend_src_utils_blog_canmanagepost",
       "frontend_src_utils_blog_formatpostdate",
       "frontend_src_utils_blog_getexcerpt",
       "frontend_src_utils_blog_sortpostsnewestfirst",
-      "frontend_src_utils_blog_validatepost"
+      "frontend_src_utils_blog_test",
+      "frontend_src_utils_blog_validatepost",
+      "frontend_src_utils_storage_getposts"
+    ],
+    "4": [
+      "frontend_src_app",
+      "frontend_src_app_app",
+      "frontend_src_app_protectedplaceholder",
+      "frontend_src_components_protectedroute",
+      "frontend_src_components_protectedroute_protectedroute",
+      "frontend_src_main",
+      "frontend_src_pages_accesspages_test",
+      "frontend_src_pages_accesspages_test_renderat",
+      "frontend_src_pages_blogpages_test",
+      "frontend_src_pages_blogpages_test_othersession",
+      "frontend_src_pages_blogpages_test_renderat",
+      "frontend_src_pages_blogpages_test_seedposts",
+      "frontend_src_pages_blogpages_test_writersession",
+      "frontend_src_pages_usermanagement_usermanagement",
+      "frontend_src_utils_auth_getsession"
     ],
     "5": [
-      "frontend_package_devdependencies",
-      "frontend_package_devdependencies_testing_library_jest_dom",
-      "frontend_package_devdependencies_testing_library_react",
-      "testing_library_jest_dom",
-      "testing_library_react"
+      "frontend_src_components_publicshell",
+      "frontend_src_components_publicshell_publicshell",
+      "frontend_src_pages_loginpage",
+      "frontend_src_pages_loginpage_loginpage",
+      "frontend_src_pages_registerpage",
+      "frontend_src_pages_registerpage_createuserid",
+      "frontend_src_pages_registerpage_registerpage",
+      "frontend_src_utils_auth",
+      "frontend_src_utils_auth_authenticate",
+      "frontend_src_utils_auth_clearsession",
+      "frontend_src_utils_auth_normalizesession",
+      "frontend_src_utils_auth_setsession",
+      "frontend_src_utils_auth_test"
     ],
     "6": [
-      "autoprefixer",
-      "frontend_package_devdependencies_autoprefixer"
+      "frontend_src_components_authenticatedshell",
+      "frontend_src_components_authenticatedshell_authenticatedshell",
+      "frontend_src_components_avatar",
+      "frontend_src_components_avatar_avatar",
+      "frontend_src_components_sharedcomponents_test",
+      "frontend_src_pages_home",
+      "frontend_src_pages_home_accentclasses",
+      "frontend_src_pages_readblog"
     ],
     "7": [
+      "frontend_e2e_admin_spec",
+      "frontend_e2e_admin_spec_adminsession",
+      "frontend_e2e_admin_spec_capturepageerrors",
+      "frontend_e2e_admin_spec_seedadminstorage"
+    ],
+    "8": [
+      "frontend_e2e_blogs_spec",
+      "frontend_e2e_blogs_spec_capturepageerrors",
+      "frontend_e2e_blogs_spec_seedauthenticatedstorage",
+      "frontend_e2e_blogs_spec_session"
+    ],
+    "9": [
       "frontend_e2e_access_spec",
       "frontend_e2e_access_spec_capturepageerrors"
     ],
-    "8": [
-      "frontend_package_devdependencies_jsdom",
-      "jsdom"
-    ],
-    "9": [
-      "frontend_package_devdependencies_playwright_test",
-      "playwright_test"
-    ],
     "10": [
-      "frontend_package_devdependencies_postcss",
-      "postcss"
+      "vercel",
+      "vercel_rewrites"
     ],
     "11": [
-      "frontend_package_devdependencies_tailwindcss",
-      "tailwindcss"
+      "frontend_playwright_config"
     ],
     "12": [
-      "frontend_package_devdependencies_testing_library_user_event",
-      "testing_library_user_event"
-    ],
-    "13": [
-      "frontend_package_devdependencies_vite",
-      "vite"
-    ],
-    "14": [
-      "frontend_package_devdependencies_vitejs_plugin_react",
-      "vitejs_plugin_react"
-    ],
-    "15": [
-      "frontend_package_devdependencies_vitest",
-      "vitest"
-    ],
-    "16": [
       "frontend_postcss_config"
     ],
-    "17": [
+    "13": [
       "frontend_src_test_setup"
     ],
-    "18": [
+    "14": [
       "frontend_tailwind_config"
     ],
-    "19": [
+    "15": [
       "frontend_vite_config"
     ]
   },
   "cohesion": {
-    "0": 0.19047619047619047,
-    "1": 0.21978021978021978,
-    "2": 0.2222222222222222,
-    "3": 0.2222222222222222,
-    "4": 0.4642857142857143,
-    "5": 0.4,
-    "6": 1.0,
-    "7": 1.0,
-    "8": 1.0,
+    "0": 0.08,
+    "1": 0.1619047619047619,
+    "2": 0.1111111111111111,
+    "3": 0.30718954248366015,
+    "4": 0.20952380952380953,
+    "5": 0.2948717948717949,
+    "6": 0.6071428571428571,
+    "7": 0.5,
+    "8": 0.5,
     "9": 1.0,
     "10": 1.0,
     "11": 1.0,
     "12": 1.0,
     "13": 1.0,
     "14": 1.0,
-    "15": 1.0,
-    "16": 1.0,
-    "17": 1.0,
-    "18": 1.0,
-    "19": 1.0
+    "15": 1.0
   },
   "gods": [
     {
       "id": "frontend_src_utils_auth_getsession",
       "label": "getSession()",
-      "degree": 7
+      "degree": 17
+    },
+    {
+      "id": "frontend_src_utils_storage_getposts",
+      "label": "getPosts()",
+      "degree": 13
+    },
+    {
+      "id": "frontend_src_utils_blog_formatpostdate",
+      "label": "formatPostDate()",
+      "degree": 10
+    },
+    {
+      "id": "frontend_src_utils_storage_getusers",
+      "label": "getUsers()",
+      "degree": 10
+    },
+    {
+      "id": "frontend_src_components_authenticatedshell_authenticatedshell",
+      "label": "AuthenticatedShell()",
+      "degree": 8
+    },
+    {
+      "id": "frontend_src_pages_home_home",
+      "label": "Home()",
+      "degree": 8
+    },
+    {
+      "id": "frontend_src_utils_blog_canmanagepost",
+      "label": "canManagePost()",
+      "degree": 8
+    },
+    {
+      "id": "frontend_src_utils_blog_sortpostsnewestfirst",
+      "label": "sortPostsNewestFirst()",
+      "degree": 8
+    },
+    {
+      "id": "frontend_src_app_app",
+      "label": "App()",
+      "degree": 6
     },
     {
       "id": "frontend_src_pages_landingpage_landingpage",
       "label": "LandingPage()",
       "degree": 6
-    },
-    {
-      "id": "frontend_src_utils_auth_setsession",
-      "label": "setSession()",
-      "degree": 5
-    },
-    {
-      "id": "frontend_src_utils_auth_authenticate",
-      "label": "authenticate()",
-      "degree": 5
-    },
-    {
-      "id": "frontend_src_utils_storage_getusers",
-      "label": "getUsers()",
-      "degree": 5
-    },
-    {
-      "id": "frontend_package_scripts",
-      "label": "scripts",
-      "degree": 4
-    },
-    {
-      "id": "frontend_src_components_publicshell_publicshell",
-      "label": "PublicShell()",
-      "degree": 4
-    },
-    {
-      "id": "frontend_src_utils_auth_normalizesession",
-      "label": "normalizeSession()",
-      "degree": 4
-    },
-    {
-      "id": "frontend_src_utils_storage_getposts",
-      "label": "getPosts()",
-      "degree": 4
-    },
-    {
-      "id": "frontend_src_app_app",
-      "label": "App()",
-      "degree": 3
     }
   ],
   "surprises": [
@@ -219,21 +251,10 @@
       "why": "peripheral node `ProtectedPlaceholder()` unexpectedly reaches hub `getSession()`"
     },
     {
-      "source": "LandingPage()",
-      "target": "getPosts()",
-      "source_files": [
-        "frontend/src/pages/LandingPage.jsx",
-        "frontend/src/utils/storage.js"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "calls",
-      "why": "bridges separate communities"
-    },
-    {
-      "source": "authenticate()",
+      "source": "readDashboardData()",
       "target": "getUsers()",
       "source_files": [
-        "frontend/src/utils/auth.js",
+        "frontend/src/pages/AdminDashboard.jsx",
         "frontend/src/utils/storage.js"
       ],
       "confidence": "EXTRACTED",
@@ -241,26 +262,37 @@
       "why": "bridges separate communities"
     },
     {
-      "source": "ProtectedRoute()",
+      "source": "AdminDashboard()",
       "target": "getSession()",
       "source_files": [
-        "frontend/src/components/ProtectedRoute.jsx",
+        "frontend/src/pages/AdminDashboard.jsx",
         "frontend/src/utils/auth.js"
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
-      "why": "cross-file semantic connection"
+      "why": "bridges separate communities"
     },
     {
-      "source": "LandingPage()",
-      "target": "formatPostDate()",
+      "source": "Home()",
+      "target": "getSession()",
       "source_files": [
-        "frontend/src/pages/LandingPage.jsx",
-        "frontend/src/utils/blog.js"
+        "frontend/src/pages/Home.jsx",
+        "frontend/src/utils/auth.js"
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
-      "why": "cross-file semantic connection"
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "ReadBlog()",
+      "target": "getSession()",
+      "source_files": [
+        "frontend/src/pages/ReadBlog.jsx",
+        "frontend/src/utils/auth.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
     }
   ],
   "tokens": {

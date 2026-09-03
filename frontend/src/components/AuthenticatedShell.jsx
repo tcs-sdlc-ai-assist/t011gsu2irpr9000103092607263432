@@ -2,6 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import Avatar from "./Avatar";
+import ThemeToggle from "./ThemeToggle";
 import { clearSession } from "../utils/auth";
 
 /**
@@ -18,7 +19,9 @@ export default function AuthenticatedShell({ children, session }) {
   const navigate = useNavigate();
   const linkClass = ({ isActive }) =>
     `text-sm font-medium ${
-      isActive ? "text-indigo-700" : "text-slate-600 hover:text-slate-950"
+      isActive
+        ? "text-indigo-700 dark:text-indigo-300"
+        : "text-slate-600 hover:text-slate-950 dark:text-slate-300 dark:hover:text-white"
     }`;
 
   /** Clear the session and return the visitor to the login page. */
@@ -29,11 +32,11 @@ export default function AuthenticatedShell({ children, session }) {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-950">
-      <header className="border-b border-slate-200 bg-white">
+      <header className="border-b border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
           <Link
             to="/blogs"
-            className="text-lg font-semibold tracking-tight text-slate-950"
+            className="text-lg font-semibold tracking-tight text-slate-950 dark:text-slate-100"
           >
             WriteSpace
           </Link>
@@ -41,7 +44,7 @@ export default function AuthenticatedShell({ children, session }) {
             type="button"
             aria-label="Toggle navigation menu"
             aria-expanded={isMenuOpen}
-            className="rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-800 md:hidden"
+            className="rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-800 md:hidden dark:border-slate-700 dark:text-slate-200"
             onClick={() => setIsMenuOpen((current) => !current)}
           >
             Menu
@@ -66,10 +69,11 @@ export default function AuthenticatedShell({ children, session }) {
                 User management
               </NavLink>
             )}
+            <ThemeToggle />
             <Avatar displayName={session.displayName} role={session.role} />
             <button
               type="button"
-              className="text-sm font-medium text-slate-600 hover:text-slate-950"
+              className="text-sm font-medium text-slate-600 hover:text-slate-950 dark:text-slate-300 dark:hover:text-white"
               onClick={handleLogout}
             >
               Log out
@@ -78,7 +82,7 @@ export default function AuthenticatedShell({ children, session }) {
         </div>
         {isMenuOpen && (
           <nav
-            className="border-t border-slate-200 px-5 py-4 md:hidden"
+            className="border-t border-slate-200 px-5 py-4 md:hidden dark:border-slate-800"
             aria-label="Mobile authenticated navigation"
           >
             <div className="mx-auto flex max-w-6xl flex-col gap-4">
@@ -114,9 +118,10 @@ export default function AuthenticatedShell({ children, session }) {
                   User management
                 </NavLink>
               )}
+              <ThemeToggle />
               <button
                 type="button"
-                className="w-fit text-sm font-medium text-slate-600"
+                className="w-fit text-sm font-medium text-slate-600 hover:text-slate-950 dark:text-slate-300 dark:hover:text-white"
                 onClick={handleLogout}
               >
                 Log out
