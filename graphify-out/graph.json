@@ -96,6 +96,76 @@
       "community": 8
     },
     {
+      "id": "frontend_e2e_dark_pages_spec",
+      "label": "dark-pages.spec.js",
+      "file_type": "code",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_dark_pages_spec_adminsession",
+      "label": "adminSession",
+      "file_type": "code",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_dark_pages_spec_capturepageerrors",
+      "label": "capturePageErrors()",
+      "file_type": "code",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L17",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_dark_pages_spec_seeddarkstorage",
+      "label": "seedDarkStorage()",
+      "file_type": "code",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L27",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_dark_pages_spec_paintedcolors",
+      "label": "paintedColors()",
+      "file_type": "code",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L62",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_dark_pages_spec_expectdarkpage",
+      "label": "expectDarkPage()",
+      "file_type": "code",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L74",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_dark_pages_spec_expectdarksurface",
+      "label": "expectDarkSurface()",
+      "file_type": "code",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L85",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_dark_pages_spec_expectdarkinput",
+      "label": "expectDarkInput()",
+      "file_type": "code",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L93",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_e2e_theme_spec",
       "label": "theme.spec.js",
       "file_type": "code",
@@ -447,6 +517,47 @@
       "_callable": true,
       "_origin": "ast",
       "community": 4
+    },
+    {
+      "id": "frontend_src_pages_darkmodepages_test",
+      "label": "DarkModePages.test.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/DarkModePages.test.jsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_pages_darkmodepages_test_writersession",
+      "label": "writerSession",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/DarkModePages.test.jsx",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_pages_darkmodepages_test_adminsession",
+      "label": "adminSession",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/DarkModePages.test.jsx",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_pages_darkmodepages_test_storedpost",
+      "label": "storedPost",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/DarkModePages.test.jsx",
+      "source_location": "L21",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_pages_darkmodepages_test_renderat",
+      "label": "renderAt()",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/DarkModePages.test.jsx",
+      "source_location": "L32",
+      "_callable": true,
+      "_origin": "ast"
     },
     {
       "id": "frontend_src_pages_home",
@@ -1026,15 +1137,15 @@
       "label": "3. Bundled free-image library",
       "file_type": "document",
       "source_file": "PLAN.md",
-      "source_location": "L58",
+      "source_location": "L59",
       "_origin": "ast"
     },
     {
-      "id": "plan_files_62",
+      "id": "plan_files_63",
       "label": "Files",
       "file_type": "document",
       "source_file": "PLAN.md",
-      "source_location": "L62",
+      "source_location": "L63",
       "_origin": "ast"
     },
     {
@@ -1042,15 +1153,15 @@
       "label": "4. Image selection and upload controls",
       "file_type": "document",
       "source_file": "PLAN.md",
-      "source_location": "L76",
+      "source_location": "L77",
       "_origin": "ast"
     },
     {
-      "id": "plan_files_80",
+      "id": "plan_files_81",
       "label": "Files",
       "file_type": "document",
       "source_file": "PLAN.md",
-      "source_location": "L80",
+      "source_location": "L81",
       "_origin": "ast"
     },
     {
@@ -1058,15 +1169,15 @@
       "label": "5. Image-aware post authoring",
       "file_type": "document",
       "source_file": "PLAN.md",
-      "source_location": "L88",
+      "source_location": "L89",
       "_origin": "ast"
     },
     {
-      "id": "plan_files_92",
+      "id": "plan_files_93",
       "label": "Files",
       "file_type": "document",
       "source_file": "PLAN.md",
-      "source_location": "L92",
+      "source_location": "L93",
       "_origin": "ast"
     },
     {
@@ -1074,15 +1185,15 @@
       "label": "6. Image rendering and safe seed posts",
       "file_type": "document",
       "source_file": "PLAN.md",
-      "source_location": "L99",
+      "source_location": "L100",
       "_origin": "ast"
     },
     {
-      "id": "plan_files_103",
+      "id": "plan_files_104",
       "label": "Files",
       "file_type": "document",
       "source_file": "PLAN.md",
-      "source_location": "L103",
+      "source_location": "L104",
       "_origin": "ast"
     },
     {
@@ -1090,7 +1201,7 @@
       "label": "Risk assessment",
       "file_type": "document",
       "source_file": "PLAN.md",
-      "source_location": "L117",
+      "source_location": "L118",
       "_origin": "ast"
     },
     {
@@ -1098,7 +1209,7 @@
       "label": "Verification",
       "file_type": "document",
       "source_file": "PLAN.md",
-      "source_location": "L127",
+      "source_location": "L128",
       "_origin": "ast"
     },
     {
@@ -1106,7 +1217,7 @@
       "label": "Release artifacts",
       "file_type": "document",
       "source_file": "PLAN.md",
-      "source_location": "L140",
+      "source_location": "L141",
       "_origin": "ast"
     },
     {
@@ -1276,6 +1387,109 @@
       "confidence": "EXTRACTED",
       "source_file": "frontend/e2e/blogs.spec.js",
       "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_dark_pages_spec",
+      "target": "frontend_e2e_dark_pages_spec_adminsession",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_dark_pages_spec",
+      "target": "frontend_e2e_dark_pages_spec_capturepageerrors",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_dark_pages_spec",
+      "target": "frontend_e2e_dark_pages_spec_seeddarkstorage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_dark_pages_spec",
+      "target": "frontend_e2e_dark_pages_spec_paintedcolors",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_dark_pages_spec",
+      "target": "frontend_e2e_dark_pages_spec_expectdarkpage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_dark_pages_spec",
+      "target": "frontend_e2e_dark_pages_spec_expectdarksurface",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_dark_pages_spec",
+      "target": "frontend_e2e_dark_pages_spec_expectdarkinput",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L93",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_dark_pages_spec_expectdarkpage",
+      "target": "frontend_e2e_dark_pages_spec_paintedcolors",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_dark_pages_spec_expectdarksurface",
+      "target": "frontend_e2e_dark_pages_spec_paintedcolors",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L86",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_dark_pages_spec_expectdarkinput",
+      "target": "frontend_e2e_dark_pages_spec_paintedcolors",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/dark-pages.spec.js",
+      "source_location": "L94",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -2091,6 +2305,90 @@
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/pages/BlogPages.test.jsx",
       "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_darkmodepages_test",
+      "target": "frontend_src_app",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DarkModePages.test.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_darkmodepages_test",
+      "target": "frontend_src_utils_storage",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DarkModePages.test.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_darkmodepages_test",
+      "target": "frontend_src_utils_storage_posts_key",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DarkModePages.test.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_darkmodepages_test",
+      "target": "frontend_src_utils_storage_users_key",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DarkModePages.test.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_darkmodepages_test",
+      "target": "frontend_src_pages_darkmodepages_test_writersession",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DarkModePages.test.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_darkmodepages_test",
+      "target": "frontend_src_pages_darkmodepages_test_adminsession",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DarkModePages.test.jsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_darkmodepages_test",
+      "target": "frontend_src_pages_darkmodepages_test_storedpost",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DarkModePages.test.jsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_darkmodepages_test",
+      "target": "frontend_src_pages_darkmodepages_test_renderat",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DarkModePages.test.jsx",
+      "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3486,17 +3784,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PLAN.md",
-      "source_location": "L58",
+      "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
       "source": "plan_3_bundled_free_image_library",
-      "target": "plan_files_62",
+      "target": "plan_files_63",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PLAN.md",
-      "source_location": "L62",
+      "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3506,17 +3804,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PLAN.md",
-      "source_location": "L76",
+      "source_location": "L77",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
       "source": "plan_4_image_selection_and_upload_controls",
-      "target": "plan_files_80",
+      "target": "plan_files_81",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PLAN.md",
-      "source_location": "L80",
+      "source_location": "L81",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3526,17 +3824,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PLAN.md",
-      "source_location": "L88",
+      "source_location": "L89",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
       "source": "plan_5_image_aware_post_authoring",
-      "target": "plan_files_92",
+      "target": "plan_files_93",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PLAN.md",
-      "source_location": "L92",
+      "source_location": "L93",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3546,17 +3844,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PLAN.md",
-      "source_location": "L99",
+      "source_location": "L100",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
       "source": "plan_6_image_rendering_and_safe_seed_posts",
-      "target": "plan_files_103",
+      "target": "plan_files_104",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PLAN.md",
-      "source_location": "L103",
+      "source_location": "L104",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3566,7 +3864,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PLAN.md",
-      "source_location": "L117",
+      "source_location": "L118",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3576,7 +3874,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PLAN.md",
-      "source_location": "L127",
+      "source_location": "L128",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3586,7 +3884,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PLAN.md",
-      "source_location": "L140",
+      "source_location": "L141",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3955,6 +4253,17 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_src_pages_darkmodepages_test",
+      "target": "frontend_src_app_app",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DarkModePages.test.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_src_pages_home",
       "target": "frontend_src_components_authenticatedshell_authenticatedshell",
       "relation": "imports",
@@ -4141,7 +4450,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/AdminDashboard.jsx",
-      "source_location": "L200",
+      "source_location": "L203",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4261,7 +4570,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/LandingPage.jsx",
-      "source_location": "L82",
+      "source_location": "L84",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4387,10 +4696,10 @@
     }
   ],
   "metadata": {
-    "built_at": "2026-09-03T10:26:02.189103+00:00",
+    "built_at": "2026-09-03T10:37:36.249102+00:00",
     "version": "graph_update-v1",
     "codebase_root": "C:\\Users\\Radheya\\Desktop\\sdlc_core\\mkt-nxs-project\\sdlc-api\\scripts\\developer_brownfield_smoke_out\\developer_brownfield_smoke\\dev-bf-smoke-20260903-095149-f5e8\\developer",
     "force": true,
-    "files_scanned": 41
+    "files_scanned": 43
   }
 }
