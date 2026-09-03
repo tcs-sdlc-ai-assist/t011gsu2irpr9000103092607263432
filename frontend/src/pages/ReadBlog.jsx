@@ -80,53 +80,53 @@ export default function ReadBlog() {
 
   return (
     <AuthenticatedShell session={session}>
-      <section className="mx-auto max-w-3xl px-5 py-12 sm:px-8">
+      <section className="mx-auto max-w-3xl px-5 py-12 dark:bg-slate-900 dark:text-slate-100 sm:px-8">
         {!hasLoaded ? (
-          <p className="text-slate-600" role="status">
+          <p className="text-slate-600 dark:text-slate-300" role="status">
             Loading story…
           </p>
         ) : !post ? (
-          <div className="rounded-lg border border-slate-200 bg-white p-8 shadow-sm">
-            <h1 className="text-2xl font-semibold tracking-tight text-slate-950">
+          <div className="rounded-lg border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100">
+            <h1 className="text-2xl font-semibold tracking-tight text-slate-950 dark:text-slate-100">
               Post not found
             </h1>
-            <p className="mt-3 text-slate-600">
+            <p className="mt-3 text-slate-600 dark:text-slate-300">
               This story may have been deleted or the link is incorrect.
             </p>
             <Link
               to="/blogs"
-              className="mt-6 inline-flex text-sm font-semibold text-indigo-700 hover:text-indigo-900"
+              className="mt-6 inline-flex text-sm font-semibold text-indigo-700 hover:text-indigo-900 dark:text-indigo-300 dark:hover:text-indigo-200"
             >
               Back to stories
             </Link>
           </div>
         ) : (
-          <article className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-700">
+          <article className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 sm:p-10">
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-700 dark:text-indigo-300">
               Story
             </p>
-            <h1 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+            <h1 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 dark:text-slate-100 sm:text-4xl">
               {post.title}
             </h1>
-            <div className="mt-6 flex items-center gap-3 border-y border-slate-100 py-4">
+            <div className="mt-6 flex items-center gap-3 border-y border-slate-100 py-4 dark:border-slate-700">
               <Avatar
                 displayName={post.authorName || "Unknown author"}
                 role={post.authorRole || "user"}
               />
               <div>
-                <p className="font-medium text-slate-800">
+                <p className="font-medium text-slate-800 dark:text-slate-100">
                   {post.authorName || "Unknown author"}
                 </p>
-                <p className="text-sm text-slate-500">
+                <p className="text-sm text-slate-500 dark:text-slate-400">
                   {formatPostDate(post.createdAt)}
                 </p>
               </div>
             </div>
-            <div className="mt-8 whitespace-pre-wrap leading-8 text-slate-700">
+            <div className="mt-8 whitespace-pre-wrap leading-8 text-slate-700 dark:text-slate-300">
               {post.content}
             </div>
             {canManagePost(session, post) && (
-              <div className="mt-10 flex flex-wrap gap-3 border-t border-slate-100 pt-6">
+              <div className="mt-10 flex flex-wrap gap-3 border-t border-slate-100 pt-6 dark:border-slate-700">
                 <Link
                   to={`/edit/${post.id}`}
                   className="rounded-md bg-indigo-700 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-800"
@@ -136,7 +136,7 @@ export default function ReadBlog() {
                 <button
                   type="button"
                   onClick={handleDelete}
-                  className="rounded-md border border-rose-300 px-4 py-2 text-sm font-semibold text-rose-700 hover:bg-rose-50"
+                  className="rounded-md border border-rose-300 px-4 py-2 text-sm font-semibold text-rose-700 hover:bg-rose-50 dark:border-rose-500 dark:text-rose-300 dark:hover:bg-rose-950"
                 >
                   Delete story
                 </button>
@@ -144,7 +144,7 @@ export default function ReadBlog() {
             )}
             {feedback && (
               <p
-                className="mt-5 text-sm font-medium text-rose-700"
+                className="mt-5 text-sm font-medium text-rose-700 dark:text-rose-300"
                 role="alert"
               >
                 {feedback}

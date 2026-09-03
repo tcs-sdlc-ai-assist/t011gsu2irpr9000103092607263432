@@ -110,7 +110,7 @@ export default function RegisterPage() {
       <div>
         <label
           htmlFor={id}
-          className="block text-sm font-medium text-slate-800"
+          className="block text-sm font-medium text-slate-800 dark:text-slate-100"
         >
           {label}
         </label>
@@ -124,13 +124,13 @@ export default function RegisterPage() {
           aria-required="true"
           aria-invalid={Boolean(error)}
           aria-describedby={error ? `${id}-error` : undefined}
-          className="mt-2 w-full rounded-md border border-slate-300 px-3 py-2.5 text-slate-950 outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200"
+          className="mt-2 w-full rounded-md border border-slate-300 px-3 py-2.5 text-slate-950 outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:focus:border-indigo-400 dark:focus:ring-indigo-900"
         />
         {error && (
           <p
             id={`${id}-error`}
             role="alert"
-            className="mt-2 text-sm text-red-700"
+            className="mt-2 text-sm text-red-700 dark:text-red-300"
           >
             {error}
           </p>
@@ -141,16 +141,18 @@ export default function RegisterPage() {
 
   return (
     <PublicShell>
-      <section className="mx-auto max-w-md px-5 py-14 sm:px-8">
-        <div className="border border-slate-200 bg-white p-7 sm:p-9">
-          <p className="text-sm font-medium text-indigo-700">Your blank page</p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight">
+      <section className="mx-auto max-w-md px-5 py-14 dark:bg-slate-900 dark:text-slate-100 sm:px-8">
+        <div className="border border-slate-200 bg-white p-7 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 sm:p-9">
+          <p className="text-sm font-medium text-indigo-700 dark:text-indigo-300">
+            Your blank page
+          </p>
+          <h1 className="mt-2 text-3xl font-semibold tracking-tight dark:text-slate-100">
             Create your account
           </h1>
           {feedback && (
             <p
               role="alert"
-              className="mt-5 border border-red-200 bg-red-50 p-3 text-sm text-red-800"
+              className="mt-5 border border-red-200 bg-red-50 p-3 text-sm text-red-800 dark:border-red-800 dark:bg-red-950 dark:text-red-200"
             >
               {feedback}
             </p>
@@ -167,16 +169,16 @@ export default function RegisterPage() {
             )}
             <button
               type="submit"
-              className="w-full rounded-md bg-slate-950 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-800"
+              className="w-full rounded-md bg-slate-950 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-800 dark:bg-slate-700 dark:hover:bg-slate-600"
             >
               Create account
             </button>
           </form>
-          <p className="mt-6 text-sm text-slate-600">
+          <p className="mt-6 text-sm text-slate-600 dark:text-slate-300">
             Already have an account?{" "}
             <Link
               to="/login"
-              className="font-semibold text-indigo-700 hover:text-indigo-900"
+              className="font-semibold text-indigo-700 hover:text-indigo-900 dark:text-indigo-300 dark:hover:text-indigo-200"
             >
               Log in
             </Link>

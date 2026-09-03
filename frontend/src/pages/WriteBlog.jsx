@@ -149,16 +149,19 @@ export default function WriteBlog() {
 
   return (
     <AuthenticatedShell session={session}>
-      <section className="mx-auto max-w-3xl px-5 py-12 sm:px-8">
-        <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-700">
+      <section className="mx-auto max-w-3xl px-5 py-12 dark:bg-slate-900 dark:text-slate-100 sm:px-8">
+        <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-700 dark:text-indigo-300">
             WriteSpace
           </p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-950">
+          <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-950 dark:text-slate-100">
             {isEditing ? "Edit story" : "Write a story"}
           </h1>
           {!isReady ? (
-            <p className="mt-6 text-slate-600" role="status">
+            <p
+              className="mt-6 text-slate-600 dark:text-slate-300"
+              role="status"
+            >
               Loading story…
             </p>
           ) : (
@@ -166,7 +169,7 @@ export default function WriteBlog() {
               <div>
                 <label
                   htmlFor="post-title"
-                  className="block text-sm font-semibold text-slate-800"
+                  className="block text-sm font-semibold text-slate-800 dark:text-slate-100"
                 >
                   Title
                 </label>
@@ -177,12 +180,12 @@ export default function WriteBlog() {
                   aria-required="true"
                   aria-invalid={Boolean(errors.title)}
                   aria-describedby={errors.title ? "title-error" : undefined}
-                  className="mt-2 block w-full rounded-md border border-slate-300 px-3 py-2 text-slate-950 shadow-sm focus:border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                  className="mt-2 block w-full rounded-md border border-slate-300 px-3 py-2 text-slate-950 shadow-sm focus:border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:focus:border-indigo-400 dark:focus:ring-indigo-900"
                 />
                 {errors.title && (
                   <p
                     id="title-error"
-                    className="mt-2 text-sm text-rose-700"
+                    className="mt-2 text-sm text-rose-700 dark:text-rose-300"
                     role="alert"
                   >
                     {errors.title}
@@ -193,11 +196,11 @@ export default function WriteBlog() {
                 <div className="flex items-baseline justify-between gap-4">
                   <label
                     htmlFor="post-content"
-                    className="block text-sm font-semibold text-slate-800"
+                    className="block text-sm font-semibold text-slate-800 dark:text-slate-100"
                   >
                     Content
                   </label>
-                  <span className="text-xs tabular-nums text-slate-500">
+                  <span className="text-xs tabular-nums text-slate-500 dark:text-slate-400">
                     {content.length} characters
                   </span>
                 </div>
@@ -210,12 +213,12 @@ export default function WriteBlog() {
                   aria-describedby={
                     errors.content ? "content-error" : undefined
                   }
-                  className="mt-2 block min-h-[256px] w-full rounded-md border border-slate-300 px-3 py-3 leading-6 text-slate-950 shadow-sm focus:border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                  className="mt-2 block min-h-[256px] w-full rounded-md border border-slate-300 px-3 py-3 leading-6 text-slate-950 shadow-sm focus:border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:focus:border-indigo-400 dark:focus:ring-indigo-900"
                 />
                 {errors.content && (
                   <p
                     id="content-error"
-                    className="mt-2 text-sm text-rose-700"
+                    className="mt-2 text-sm text-rose-700 dark:text-rose-300"
                     role="alert"
                   >
                     {errors.content}
@@ -223,20 +226,23 @@ export default function WriteBlog() {
                 )}
               </div>
               {feedback && (
-                <p className="text-sm font-medium text-rose-700" role="alert">
+                <p
+                  className="text-sm font-medium text-rose-700 dark:text-rose-300"
+                  role="alert"
+                >
                   {feedback}
                 </p>
               )}
               <div className="flex flex-wrap items-center gap-3 pt-2">
                 <button
                   type="submit"
-                  className="rounded-md bg-indigo-700 px-5 py-3 text-sm font-semibold text-white hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+                  className="rounded-md bg-indigo-700 px-5 py-3 text-sm font-semibold text-white hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
                 >
                   {isEditing ? "Save changes" : "Publish story"}
                 </button>
                 <Link
                   to="/blogs"
-                  className="rounded-md px-4 py-3 text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-slate-950"
+                  className="rounded-md px-4 py-3 text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-slate-100"
                 >
                   Cancel
                 </Link>
@@ -244,7 +250,7 @@ export default function WriteBlog() {
                   <button
                     type="button"
                     onClick={handleDelete}
-                    className="ml-auto rounded-md px-4 py-3 text-sm font-semibold text-rose-700 hover:bg-rose-50"
+                    className="ml-auto rounded-md px-4 py-3 text-sm font-semibold text-rose-700 hover:bg-rose-50 dark:text-rose-300 dark:hover:bg-rose-950"
                   >
                     Delete story
                   </button>

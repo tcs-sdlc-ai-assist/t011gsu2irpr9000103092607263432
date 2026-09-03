@@ -21,7 +21,7 @@ export default function PublicShell({ children }) {
     }`;
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-950">
+    <div className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-900 dark:text-slate-100">
       <header className="border-b border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
           <Link
@@ -101,8 +101,8 @@ export default function PublicShell({ children }) {
         )}
       </header>
       <main>{children}</main>
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto max-w-6xl px-5 py-6 text-sm text-slate-500 sm:px-8">
+      <footer className="border-t border-slate-700 bg-slate-800">
+        <div className="mx-auto max-w-6xl px-5 py-6 text-sm text-slate-300 sm:px-8">
           A quiet place for your words.
         </div>
       </footer>

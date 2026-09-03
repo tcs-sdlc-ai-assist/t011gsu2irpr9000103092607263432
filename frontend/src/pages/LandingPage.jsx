@@ -46,25 +46,25 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-      <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
+      <section className="mx-auto max-w-6xl px-5 py-16 dark:bg-slate-900 dark:text-slate-100 sm:px-8">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="text-sm font-medium text-indigo-700">
+            <p className="text-sm font-medium text-indigo-700 dark:text-indigo-300">
               From the community
             </p>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight">
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight dark:text-slate-100">
               Latest stories
             </h2>
           </div>
           <Link
             to="/blogs"
-            className="text-sm font-semibold text-indigo-700 hover:text-indigo-900"
+            className="text-sm font-semibold text-indigo-700 hover:text-indigo-900 dark:text-indigo-300 dark:hover:text-indigo-200"
           >
             View all stories
           </Link>
         </div>
         {posts.length === 0 ? (
-          <p className="mt-8 border border-slate-200 bg-white p-6 text-slate-600">
+          <p className="mt-8 border border-slate-200 bg-white p-6 text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100">
             No posts yet — check back soon!
           </p>
         ) : (
@@ -72,18 +72,20 @@ export default function LandingPage() {
             {posts.map((post) => (
               <article
                 key={post.id}
-                className="border border-slate-200 bg-white p-6"
+                className="border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
               >
-                <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
+                <p className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
                   {formatPostDate(post.createdAt)}
                 </p>
-                <h3 className="mt-3 text-lg font-semibold">{post.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-600">
+                <h3 className="mt-3 text-lg font-semibold dark:text-slate-100">
+                  {post.title}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
                   {getExcerpt(post.content)}
                 </p>
                 <Link
                   to={`/blog/${post.id}`}
-                  className="mt-5 inline-block text-sm font-semibold text-indigo-700 hover:text-indigo-900"
+                  className="mt-5 inline-block text-sm font-semibold text-indigo-700 hover:text-indigo-900 dark:text-indigo-300 dark:hover:text-indigo-200"
                 >
                   Read story
                 </Link>
