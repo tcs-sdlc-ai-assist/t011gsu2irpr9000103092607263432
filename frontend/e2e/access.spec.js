@@ -20,7 +20,13 @@ test('a visitor can register and reach protected stories without browser errors'
   await page.getByRole('button', { name: 'Create account' }).click();
 
   await expect(page.getByRole('heading', { name: 'Stories', exact: true })).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'No stories yet' })).toBeVisible();
+  await expect(
+    page.getByRole('link', { name: 'Finding Space for a Slower Morning' }),
+  ).toBeVisible();
+  const posts = await page.evaluate(() =>
+    JSON.parse(localStorage.getItem('writespace_posts') || '[]'),
+  );
+  expect(posts).toHaveLength(3);
   expect(errors).toEqual([]);
 });
 

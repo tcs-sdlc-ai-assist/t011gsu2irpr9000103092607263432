@@ -380,7 +380,9 @@ export default function UserManagement() {
               Refresh
             </button>
           </div>
-          <table className="mt-5 hidden w-full border-separate border-spacing-0 overflow-hidden rounded-lg border border-slate-200 bg-white text-left dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 md:table">
+          <table
+            className="mt-5 hidden w-full border-separate border-spacing-0 overflow-hidden rounded-lg border border-slate-200 bg-white text-left dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 md:table"
+          >
             <thead className="bg-slate-50 text-xs uppercase tracking-wide text-slate-600 dark:bg-slate-800 dark:text-slate-300">
               <tr>
                 <th

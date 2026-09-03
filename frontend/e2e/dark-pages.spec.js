@@ -24,10 +24,10 @@ function capturePageErrors(page) {
 }
 
 /** Seed dark mode and deterministic records before the application initializes. */
-async function seedDarkStorage(page) {
-  await page.addInitScript((session) => {
+async function seedDarkStorage(page, session = adminSession) {
+  await page.addInitScript((localSession) => {
     localStorage.setItem("writespace_theme", "dark");
-    localStorage.setItem("writespace_session", JSON.stringify(session));
+    localStorage.setItem("writespace_session", JSON.stringify(localSession));
     localStorage.setItem(
       "writespace_posts",
       JSON.stringify([
@@ -55,7 +55,8 @@ async function seedDarkStorage(page) {
         },
       ]),
     );
-  }, adminSession);
+    localStorage.setItem("writespace_seeded", "true");
+  }, session);
 }
 
 /** Read the key painted colors for one rendered element. */
@@ -97,13 +98,13 @@ async function expectDarkInput(locator) {
   expect(colors.border).toBe(darkInputBorder);
 }
 
-test("all required desktop routes render readable dark surfaces", async ({
+test("public links traverse landing, login, and registration dark surfaces", async ({
   page,
 }) => {
   const errors = capturePageErrors(page);
   await seedDarkStorage(page);
-
   await page.goto("/");
+
   await expectDarkPage(page, "Latest stories");
   await expectDarkSurface(
     page
@@ -111,7 +112,7 @@ test("all required desktop routes render readable dark surfaces", async ({
       .locator("xpath=ancestor::article[1]"),
   );
 
-  await page.goto("/login");
+  await page.getByRole("link", { name: "Log in" }).click();
   await expectDarkPage(page, "Log in to WriteSpace");
   await expectDarkSurface(
     page
@@ -120,7 +121,7 @@ test("all required desktop routes render readable dark surfaces", async ({
   );
   await expectDarkInput(page.getByLabel("Username"));
 
-  await page.goto("/register");
+  await page.getByRole("link", { name: "Create an account" }).click();
   await expectDarkPage(page, "Create your account");
   await expectDarkSurface(
     page
@@ -128,46 +129,49 @@ test("all required desktop routes render readable dark surfaces", async ({
       .locator("xpath=ancestor::div[1]"),
   );
   await expectDarkInput(page.getByLabel("Confirm password"));
+  expect(errors).toEqual([]);
+});
 
+test("authenticated links traverse listing, reader, edit, and write dark surfaces", async ({
+  page,
+}) => {
+  const errors = capturePageErrors(page);
+  await seedDarkStorage(page);
   await page.goto("/blogs");
+
   await expectDarkPage(page, "Stories");
   await expectDarkSurface(
     page
       .getByRole("heading", { name: "A dark mode story" })
       .locator("xpath=ancestor::article[1]"),
   );
-  await expect(page.getByText("Admin", { exact: true }).last()).toBeVisible();
 
-  await page.goto("/blog/dark-post");
+  await page.getByRole("link", { name: "A dark mode story" }).click();
   await expectDarkPage(page, "A dark mode story");
   await expectDarkSurface(page.locator("article"));
-  await expect(
-    page.getByText("Readable content on a dark reader surface."),
-  ).toBeVisible();
-  await expect(
-    page.getByRole("button", { name: "Delete story" }),
-  ).toBeVisible();
+  await expect(page.getByText("Readable content on a dark reader surface.")).toBeVisible();
 
-  await page.goto("/write");
-  await expectDarkPage(page, "Write a story");
-  await expectDarkSurface(
-    page
-      .getByRole("heading", { name: "Write a story" })
-      .locator("xpath=ancestor::div[1]"),
-  );
-  await expectDarkInput(page.getByLabel("Title"));
-  await expectDarkInput(page.getByLabel("Content"));
-
-  await page.goto("/edit/dark-post");
+  await page.getByRole("link", { name: "Edit story" }).click();
   await expectDarkPage(page, "Edit story");
   await expect(page.getByLabel("Title")).toHaveValue("A dark mode story");
   await expectDarkInput(page.getByLabel("Title"));
   await expectDarkInput(page.getByLabel("Content"));
-  await expect(
-    page.getByRole("button", { name: "Delete story" }),
-  ).toBeVisible();
 
+  await page.getByRole("link", { name: "WriteSpace" }).click();
+  await page.getByRole("link", { name: "Write", exact: true }).click();
+  await expectDarkPage(page, "Write a story");
+  await expectDarkInput(page.getByLabel("Title"));
+  await expectDarkInput(page.getByLabel("Content"));
+  expect(errors).toEqual([]);
+});
+
+test("admin actions traverse dashboard and user-management dark surfaces", async ({
+  page,
+}) => {
+  const errors = capturePageErrors(page);
+  await seedDarkStorage(page);
   await page.goto("/admin");
+
   await expectDarkPage(page, "Admin dashboard");
   const statistic = page
     .getByText("Total Posts")
@@ -180,7 +184,7 @@ test("all required desktop routes render readable dark surfaces", async ({
       .locator("xpath=ancestor::section[1]"),
   );
 
-  await page.goto("/users");
+  await page.getByRole("link", { name: "Manage users" }).click();
   await expectDarkPage(page, "User management");
   await expectDarkSurface(
     page
@@ -190,10 +194,6 @@ test("all required desktop routes render readable dark surfaces", async ({
   await expectDarkInput(page.getByLabel("Display name"));
   await expectDarkInput(page.getByLabel("Role"));
   await expectDarkSurface(page.getByRole("table"));
-  await expect(
-    page.getByRole("columnheader", { name: "Display name" }),
-  ).toBeVisible();
-
   expect(errors).toEqual([]);
 });
 

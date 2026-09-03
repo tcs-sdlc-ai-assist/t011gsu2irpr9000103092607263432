@@ -48,6 +48,42 @@ beforeEach(() => {
 });
 
 describe("dark page surfaces", () => {
+  it("preserves representative light surfaces when the root dark class is absent", async () => {
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem(POSTS_KEY, JSON.stringify([storedPost]));
+    const landing = renderAt("/");
+
+    const landingCard = screen
+      .getByRole("heading", { name: storedPost.title })
+      .closest("article");
+    expect(document.documentElement).not.toHaveClass("dark");
+    expect(landingCard).toHaveClass("bg-white", "border-slate-200");
+    landing.unmount();
+
+    const login = renderAt("/login");
+    expect(
+      screen.getByRole("heading", { name: "Log in to WriteSpace" }).closest("div"),
+    ).toHaveClass("bg-white", "border-slate-200");
+    expect(screen.getByLabelText("Username")).toHaveClass(
+      "border-slate-300",
+      "text-slate-950",
+    );
+    login.unmount();
+
+    const write = renderAt("/write", writerSession);
+    expect(screen.getByLabelText("Title")).toHaveClass(
+      "border-slate-300",
+      "text-slate-950",
+    );
+    write.unmount();
+
+    renderAt("/admin", adminSession);
+    const statisticCard = (await screen.findByText("Total Posts")).closest(
+      "div.overflow-hidden",
+    );
+    expect(statisticCard).toHaveClass("bg-white", "border-slate-200");
+  });
+
   it("styles public landing, login, and registration surfaces for dark mode", () => {
     localStorage.setItem(POSTS_KEY, JSON.stringify([storedPost]));
     const landing = renderAt("/");

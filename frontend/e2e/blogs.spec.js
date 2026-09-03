@@ -43,7 +43,16 @@ test('an authenticated writer can create, reload, read, edit, and delete a story
   page.once('dialog', (dialog) => dialog.accept());
   await page.getByRole('button', { name: 'Delete story' }).click();
   await expect(page.getByRole('heading', { name: 'Stories', exact: true })).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'No stories yet' })).toBeVisible();
+  await expect(
+    page.getByRole('link', { name: 'Playwright local story' }),
+  ).toHaveCount(0);
+  await expect(
+    page.getByRole('link', { name: 'Finding Space for a Slower Morning' }),
+  ).toBeVisible();
+  const remainingPosts = await page.evaluate(() =>
+    JSON.parse(localStorage.getItem('writespace_posts') || '[]'),
+  );
+  expect(remainingPosts).toHaveLength(3);
   expect(errors).toEqual([]);
 });
 

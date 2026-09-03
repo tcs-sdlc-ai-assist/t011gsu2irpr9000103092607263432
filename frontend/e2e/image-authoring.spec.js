@@ -26,6 +26,7 @@ async function seedStorage(page, posts = []) {
         JSON.stringify(localSession),
       );
       localStorage.setItem("writespace_posts", JSON.stringify(localPosts));
+      localStorage.setItem("writespace_seeded", "true");
     },
     { localSession: session, localPosts: posts },
   );

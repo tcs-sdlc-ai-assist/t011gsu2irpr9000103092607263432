@@ -170,7 +170,7 @@ test("authenticated listings and readers render valid images and safe placeholde
     await expect(card.locator("img")).toHaveCount(0);
   }
 
-  await page.goto("/blog/with-images");
+  await page.getByRole("link", { name: "Story with images" }).click();
   const cover = page.getByRole("img", { name: "Story with images cover" });
   const heading = page.getByRole("heading", { name: "Story with images" });
   await expect(cover).toHaveAttribute("loading", "lazy");
@@ -188,10 +188,50 @@ test("authenticated listings and readers render valid images and safe placeholde
   await expect(gallery.first().locator("xpath=../..")).toHaveClass(/grid-cols-2/);
   await expect(gallery.first().locator("xpath=../..")).toHaveClass(/md:grid-cols-3/);
 
-  for (const id of ["without-cover", "legacy-post"]) {
-    await page.goto(`/blog/${id}`);
-    await expect(page.getByText(id === "legacy-post" ? "Legacy content remains readable." : "No cover content.")).toBeVisible();
-    await expect(page.getByRole("img", { name: /cover|Gallery image/ })).toHaveCount(0);
-  }
   expect(errors).toEqual([]);
 });
+
+for (const scenario of [
+  {
+    name: "a no-cover reader omits image regions safely",
+    post: {
+      id: "without-cover",
+      title: "Story without cover",
+      content: "No cover content.",
+      coverImage: "",
+      gallery: [],
+    },
+  },
+  {
+    name: "a legacy reader without image fields remains readable",
+    post: {
+      id: "legacy-post",
+      title: "Legacy story",
+      content: "Legacy content remains readable.",
+    },
+  },
+]) {
+  test(scenario.name, async ({ page }) => {
+    const errors = capturePageErrors(page);
+    await preloadStorage(page, {
+      posts: [
+        {
+          ...scenario.post,
+          authorId: session.userId,
+          authorName: session.displayName,
+          authorRole: session.role,
+          createdAt: "2024-06-01T10:00:00.000Z",
+        },
+      ],
+      seeded: "true",
+      localSession: session,
+    });
+    await page.goto(`/blog/${scenario.post.id}`);
+
+    await expect(page.getByText(scenario.post.content)).toBeVisible();
+    await expect(
+      page.getByRole("img", { name: /cover|Gallery image/ }),
+    ).toHaveCount(0);
+    expect(errors).toEqual([]);
+  });
+}
