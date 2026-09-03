@@ -102,7 +102,7 @@ export default function LandingPage() {
               {posts.map((post, index) => (
                 <article
                   key={post.id}
-                  className={`group overflow-hidden rounded-2xl border border-black/5 bg-white transition-transform duration-200 hover:-translate-y-1 dark:border-slate-700 dark:!border-white/10 dark:bg-slate-800 dark:bg-ink-900 dark:!bg-ink-900 dark:text-slate-100 ${
+                  className={`group overflow-hidden rounded-2xl border border-slate-200 border-black/5 bg-white transition-transform duration-200 hover:-translate-y-1 dark:border-slate-700 dark:!border-white/10 dark:bg-slate-800 dark:bg-ink-900 dark:!bg-ink-900 dark:text-slate-100 ${
                     index === 0 ? "md:col-span-2 md:grid md:grid-cols-2" : ""
                   }`}
                 >

@@ -52,7 +52,7 @@ export default function LoginPage() {
   return (
     <PublicShell>
       <section className="mx-auto flex min-h-[calc(100dvh-145px)] max-w-md items-center px-5 py-16 text-ink-950 dark:bg-slate-900 dark:text-slate-100 dark:!bg-ink-950 sm:px-8">
-        <div className="w-full rounded-2xl border border-black/5 bg-white p-7 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:!border-white/10 dark:!bg-ink-900 sm:p-9">
+        <div className="w-full rounded-2xl border border-slate-200 border-black/5 bg-white p-7 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:!border-white/10 dark:!bg-ink-900 sm:p-9">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-700 text-signal-600 dark:text-indigo-300 dark:!text-signal-500">
             Welcome back
           </p>

@@ -1,9 +1,9 @@
 import { expect, test } from "@playwright/test";
 
-const darkBackground = "rgb(15, 23, 42)";
-const darkSurface = "rgb(30, 41, 59)";
+const darkBackground = "rgb(25, 27, 31)";
+const darkSurface = "rgb(34, 36, 41)";
 const darkForeground = "rgb(241, 245, 249)";
-const darkBorder = "rgb(51, 65, 85)";
+const darkBorder = "rgba(255, 255, 255, 0.1)";
 const darkInputBorder = "rgb(71, 85, 105)";
 
 const adminSession = {

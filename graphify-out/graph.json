@@ -134,7 +134,7 @@
       "label": "paintedColors()",
       "file_type": "code",
       "source_file": "frontend/e2e/dark-pages.spec.js",
-      "source_location": "L62",
+      "source_location": "L63",
       "_callable": true,
       "_origin": "ast"
     },
@@ -143,7 +143,7 @@
       "label": "expectDarkPage()",
       "file_type": "code",
       "source_file": "frontend/e2e/dark-pages.spec.js",
-      "source_location": "L74",
+      "source_location": "L75",
       "_callable": true,
       "_origin": "ast"
     },
@@ -152,7 +152,7 @@
       "label": "expectDarkSurface()",
       "file_type": "code",
       "source_file": "frontend/e2e/dark-pages.spec.js",
-      "source_location": "L85",
+      "source_location": "L86",
       "_callable": true,
       "_origin": "ast"
     },
@@ -161,7 +161,7 @@
       "label": "expectDarkInput()",
       "file_type": "code",
       "source_file": "frontend/e2e/dark-pages.spec.js",
-      "source_location": "L93",
+      "source_location": "L94",
       "_callable": true,
       "_origin": "ast"
     },
@@ -204,7 +204,50 @@
       "label": "readPosts()",
       "file_type": "code",
       "source_file": "frontend/e2e/image-authoring.spec.js",
-      "source_location": "L35",
+      "source_location": "L36",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_image_rendering_seed_spec",
+      "label": "image-rendering-seed.spec.js",
+      "file_type": "code",
+      "source_file": "frontend/e2e/image-rendering-seed.spec.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_image_rendering_seed_spec_session",
+      "label": "session",
+      "file_type": "code",
+      "source_file": "frontend/e2e/image-rendering-seed.spec.js",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_image_rendering_seed_spec_capturepageerrors",
+      "label": "capturePageErrors()",
+      "file_type": "code",
+      "source_file": "frontend/e2e/image-rendering-seed.spec.js",
+      "source_location": "L15",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_image_rendering_seed_spec_preloadstorage",
+      "label": "preloadStorage()",
+      "file_type": "code",
+      "source_file": "frontend/e2e/image-rendering-seed.spec.js",
+      "source_location": "L25",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_image_rendering_seed_spec_readposts",
+      "label": "readPosts()",
+      "file_type": "code",
+      "source_file": "frontend/e2e/image-rendering-seed.spec.js",
+      "source_location": "L55",
       "_callable": true,
       "_origin": "ast"
     },
@@ -234,6 +277,74 @@
       "_origin": "ast"
     },
     {
+      "id": "frontend_e2e_visual_reference_spec",
+      "label": "visual-reference.spec.js",
+      "file_type": "code",
+      "source_file": "frontend/e2e/visual-reference.spec.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_visual_reference_spec_captureruntimeevidence",
+      "label": "captureRuntimeEvidence()",
+      "file_type": "code",
+      "source_file": "frontend/e2e/visual-reference.spec.js",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_visual_workflow_spec",
+      "label": "visual-workflow.spec.js",
+      "file_type": "code",
+      "source_file": "frontend/e2e/visual-workflow.spec.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_visual_workflow_spec_adminsession",
+      "label": "adminSession",
+      "file_type": "code",
+      "source_file": "frontend/e2e/visual-workflow.spec.js",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_visual_workflow_spec_visualstory",
+      "label": "visualStory",
+      "file_type": "code",
+      "source_file": "frontend/e2e/visual-workflow.spec.js",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_visual_workflow_spec_captureruntimeevidence",
+      "label": "captureRuntimeEvidence()",
+      "file_type": "code",
+      "source_file": "frontend/e2e/visual-workflow.spec.js",
+      "source_location": "L23",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_visual_workflow_spec_seedauthenticatedworkflow",
+      "label": "seedAuthenticatedWorkflow()",
+      "file_type": "code",
+      "source_file": "frontend/e2e/visual-workflow.spec.js",
+      "source_location": "L41",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_visual_workflow_spec_paintedstyle",
+      "label": "paintedStyle()",
+      "file_type": "code",
+      "source_file": "frontend/e2e/visual-workflow.spec.js",
+      "source_location": "L67",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_playwright_config",
       "label": "playwright.config.js",
       "file_type": "code",
@@ -250,6 +361,22 @@
       "source_location": "L1",
       "_origin": "ast",
       "community": 12
+    },
+    {
+      "id": "frontend_public_fonts_license",
+      "label": "LICENSE.md",
+      "file_type": "document",
+      "source_file": "frontend/public/fonts/LICENSE.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_public_fonts_license_lexend_deca_font_license",
+      "label": "Lexend Deca font license",
+      "file_type": "document",
+      "source_file": "frontend/public/fonts/LICENSE.md",
+      "source_location": "L1",
+      "_origin": "ast"
     },
     {
       "id": "frontend_public_images_free_license",
@@ -281,7 +408,7 @@
       "label": "ProtectedPlaceholder()",
       "file_type": "code",
       "source_file": "frontend/src/App.jsx",
-      "source_location": "L23",
+      "source_location": "L26",
       "_callable": true,
       "_origin": "ast",
       "community": 4
@@ -291,7 +418,7 @@
       "label": "App()",
       "file_type": "code",
       "source_file": "frontend/src/App.jsx",
-      "source_location": "L48",
+      "source_location": "L51",
       "_callable": true,
       "_origin": "ast",
       "community": 4
@@ -725,6 +852,58 @@
       "community": 3
     },
     {
+      "id": "frontend_src_pages_imagerendering_test",
+      "label": "ImageRendering.test.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_pages_imagerendering_test_session",
+      "label": "session",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_pages_imagerendering_test_makepost",
+      "label": "makePost()",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L18",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_pages_imagerendering_test_seedstate",
+      "label": "seedState()",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L34",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_pages_imagerendering_test_renderroute",
+      "label": "renderRoute()",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L40",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_pages_imagerendering_test_renderreader",
+      "label": "renderReader()",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L49",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_src_pages_landingpage",
       "label": "LandingPage.jsx",
       "file_type": "code",
@@ -857,6 +1036,72 @@
       "_callable": true,
       "_origin": "ast",
       "community": 4
+    },
+    {
+      "id": "frontend_src_pages_visualreference_test",
+      "label": "VisualReference.test.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/VisualReference.test.jsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_pages_visualreference_test_adminsession",
+      "label": "adminSession",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/VisualReference.test.jsx",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_pages_visualreference_test_renderwithrouter",
+      "label": "renderWithRouter()",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/VisualReference.test.jsx",
+      "source_location": "L20",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_pages_visualworkflow_test",
+      "label": "VisualWorkflow.test.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/VisualWorkflow.test.jsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_pages_visualworkflow_test_writersession",
+      "label": "writerSession",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/VisualWorkflow.test.jsx",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_pages_visualworkflow_test_adminsession",
+      "label": "adminSession",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/VisualWorkflow.test.jsx",
+      "source_location": "L17",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_pages_visualworkflow_test_visualpost",
+      "label": "visualPost",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/VisualWorkflow.test.jsx",
+      "source_location": "L24",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_pages_visualworkflow_test_renderat",
+      "label": "renderAt()",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/VisualWorkflow.test.jsx",
+      "source_location": "L37",
+      "_callable": true,
+      "_origin": "ast"
     },
     {
       "id": "frontend_src_pages_writeblog",
@@ -1148,6 +1393,48 @@
       "_origin": "ast"
     },
     {
+      "id": "frontend_src_utils_seed",
+      "label": "seed.js",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/seed.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_utils_seed_seed_posts",
+      "label": "SEED_POSTS",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/seed.js",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_utils_seed_seediffirstrun",
+      "label": "seedIfFirstRun()",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/seed.js",
+      "source_location": "L37",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_utils_seed_test",
+      "label": "seed.test.js",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/seed.test.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_utils_seed_test_readstoredposts",
+      "label": "readStoredPosts()",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/seed.test.js",
+      "source_location": "L7",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_src_utils_storage",
       "label": "storage.js",
       "file_type": "code",
@@ -1175,11 +1462,19 @@
       "community": 1
     },
     {
+      "id": "frontend_src_utils_storage_seed_key",
+      "label": "SEED_KEY",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/storage.js",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_src_utils_storage_readarray",
       "label": "readArray()",
       "file_type": "code",
       "source_file": "frontend/src/utils/storage.js",
-      "source_location": "L14",
+      "source_location": "L16",
       "_callable": true,
       "_origin": "ast",
       "community": 1
@@ -1189,7 +1484,7 @@
       "label": "writeArray()",
       "file_type": "code",
       "source_file": "frontend/src/utils/storage.js",
-      "source_location": "L33",
+      "source_location": "L35",
       "_callable": true,
       "_origin": "ast",
       "community": 1
@@ -1199,7 +1494,7 @@
       "label": "getPosts()",
       "file_type": "code",
       "source_file": "frontend/src/utils/storage.js",
-      "source_location": "L52",
+      "source_location": "L54",
       "_callable": true,
       "_origin": "ast",
       "community": 3
@@ -1209,7 +1504,7 @@
       "label": "savePosts()",
       "file_type": "code",
       "source_file": "frontend/src/utils/storage.js",
-      "source_location": "L64",
+      "source_location": "L66",
       "_callable": true,
       "_origin": "ast",
       "community": 1
@@ -1219,7 +1514,7 @@
       "label": "getUsers()",
       "file_type": "code",
       "source_file": "frontend/src/utils/storage.js",
-      "source_location": "L74",
+      "source_location": "L76",
       "_callable": true,
       "_origin": "ast",
       "community": 1
@@ -1229,10 +1524,28 @@
       "label": "saveUsers()",
       "file_type": "code",
       "source_file": "frontend/src/utils/storage.js",
-      "source_location": "L86",
+      "source_location": "L88",
       "_callable": true,
       "_origin": "ast",
       "community": 1
+    },
+    {
+      "id": "frontend_src_utils_storage_getseedflag",
+      "label": "getSeedFlag()",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/storage.js",
+      "source_location": "L98",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_utils_storage_setseedflag",
+      "label": "setSeedFlag()",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/storage.js",
+      "source_location": "L112",
+      "_callable": true,
+      "_origin": "ast"
     },
     {
       "id": "frontend_src_utils_storage_test",
@@ -1440,11 +1753,51 @@
       "_origin": "ast"
     },
     {
+      "id": "plan_7_nolanai_inspired_visual_foundation_and_public_experience",
+      "label": "7. NolanAI-inspired visual foundation and public experience",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": "L118",
+      "_origin": "ast"
+    },
+    {
+      "id": "plan_files_122",
+      "label": "Files",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": "L122",
+      "_origin": "ast"
+    },
+    {
+      "id": "plan_8_nolanai_inspired_application_surfaces",
+      "label": "8. NolanAI-inspired application surfaces",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": "L136",
+      "_origin": "ast"
+    },
+    {
+      "id": "plan_files_140",
+      "label": "Files",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": "L140",
+      "_origin": "ast"
+    },
+    {
+      "id": "plan_reference_evidence",
+      "label": "Reference evidence",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": "L155",
+      "_origin": "ast"
+    },
+    {
       "id": "plan_risk_assessment",
       "label": "Risk assessment",
       "file_type": "document",
       "source_file": "PLAN.md",
-      "source_location": "L118",
+      "source_location": "L159",
       "_origin": "ast"
     },
     {
@@ -1452,7 +1805,7 @@
       "label": "Verification",
       "file_type": "document",
       "source_file": "PLAN.md",
-      "source_location": "L128",
+      "source_location": "L169",
       "_origin": "ast"
     },
     {
@@ -1460,7 +1813,7 @@
       "label": "Release artifacts",
       "file_type": "document",
       "source_file": "PLAN.md",
-      "source_location": "L141",
+      "source_location": "L182",
       "_origin": "ast"
     },
     {
@@ -1669,7 +2022,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/e2e/dark-pages.spec.js",
-      "source_location": "L62",
+      "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -1679,7 +2032,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/e2e/dark-pages.spec.js",
-      "source_location": "L74",
+      "source_location": "L75",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -1689,7 +2042,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/e2e/dark-pages.spec.js",
-      "source_location": "L85",
+      "source_location": "L86",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -1699,7 +2052,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/e2e/dark-pages.spec.js",
-      "source_location": "L93",
+      "source_location": "L94",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -1710,7 +2063,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/e2e/dark-pages.spec.js",
-      "source_location": "L79",
+      "source_location": "L80",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -1721,7 +2074,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/e2e/dark-pages.spec.js",
-      "source_location": "L86",
+      "source_location": "L87",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -1732,7 +2085,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/e2e/dark-pages.spec.js",
-      "source_location": "L94",
+      "source_location": "L95",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -1772,7 +2125,47 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/e2e/image-authoring.spec.js",
-      "source_location": "L35",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_image_rendering_seed_spec",
+      "target": "frontend_e2e_image_rendering_seed_spec_session",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/image-rendering-seed.spec.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_image_rendering_seed_spec",
+      "target": "frontend_e2e_image_rendering_seed_spec_capturepageerrors",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/image-rendering-seed.spec.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_image_rendering_seed_spec",
+      "target": "frontend_e2e_image_rendering_seed_spec_preloadstorage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/image-rendering-seed.spec.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_image_rendering_seed_spec",
+      "target": "frontend_e2e_image_rendering_seed_spec_readposts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/image-rendering-seed.spec.js",
+      "source_location": "L55",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -1793,6 +2186,76 @@
       "confidence": "EXTRACTED",
       "source_file": "frontend/e2e/theme.spec.js",
       "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_visual_reference_spec",
+      "target": "frontend_e2e_visual_reference_spec_captureruntimeevidence",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/visual-reference.spec.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_visual_workflow_spec",
+      "target": "frontend_e2e_visual_workflow_spec_adminsession",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/visual-workflow.spec.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_visual_workflow_spec",
+      "target": "frontend_e2e_visual_workflow_spec_visualstory",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/visual-workflow.spec.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_visual_workflow_spec",
+      "target": "frontend_e2e_visual_workflow_spec_captureruntimeevidence",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/visual-workflow.spec.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_visual_workflow_spec",
+      "target": "frontend_e2e_visual_workflow_spec_seedauthenticatedworkflow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/visual-workflow.spec.js",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_visual_workflow_spec",
+      "target": "frontend_e2e_visual_workflow_spec_paintedstyle",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/visual-workflow.spec.js",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_public_fonts_license",
+      "target": "frontend_public_fonts_license_lexend_deca_font_license",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/public/fonts/LICENSE.md",
+      "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -1940,11 +2403,33 @@
     },
     {
       "source": "frontend_src_app",
+      "target": "frontend_src_utils_seed",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_app",
+      "target": "frontend_src_utils_seed_seediffirstrun",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_app",
       "target": "frontend_src_app_protectedplaceholder",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/App.jsx",
-      "source_location": "L23",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -1954,7 +2439,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/App.jsx",
-      "source_location": "L48",
+      "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -2986,6 +3471,144 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_src_pages_imagerendering_test",
+      "target": "frontend_src_pages_home",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_imagerendering_test",
+      "target": "frontend_src_pages_landingpage",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_imagerendering_test",
+      "target": "frontend_src_pages_readblog",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_imagerendering_test",
+      "target": "frontend_src_utils_auth",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_imagerendering_test",
+      "target": "frontend_src_utils_auth_session_key",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_imagerendering_test",
+      "target": "frontend_src_utils_storage",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_imagerendering_test",
+      "target": "frontend_src_utils_storage_posts_key",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_imagerendering_test",
+      "target": "frontend_src_pages_imagerendering_test_session",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_imagerendering_test",
+      "target": "frontend_src_pages_imagerendering_test_makepost",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_imagerendering_test",
+      "target": "frontend_src_pages_imagerendering_test_seedstate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_imagerendering_test",
+      "target": "frontend_src_pages_imagerendering_test_renderroute",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_imagerendering_test",
+      "target": "frontend_src_pages_imagerendering_test_renderreader",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_imagerendering_test_renderreader",
+      "target": "frontend_src_pages_imagerendering_test_seedstate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_src_pages_landingpage",
       "target": "frontend_src_components_publicshell",
       "relation": "imports_from",
@@ -3435,6 +4058,176 @@
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/pages/UserManagement.jsx",
       "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualreference_test",
+      "target": "frontend_tailwind_config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualReference.test.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualreference_test",
+      "target": "frontend_src_components_authenticatedshell",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualReference.test.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualreference_test",
+      "target": "frontend_src_components_publicshell",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualReference.test.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualreference_test",
+      "target": "frontend_src_components_themetoggle",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualReference.test.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualreference_test",
+      "target": "frontend_src_pages_landingpage",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualReference.test.jsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualreference_test",
+      "target": "frontend_src_pages_visualreference_test_adminsession",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualReference.test.jsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualreference_test",
+      "target": "frontend_src_pages_visualreference_test_renderwithrouter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualReference.test.jsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualworkflow_test",
+      "target": "frontend_src_app",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualWorkflow.test.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualworkflow_test",
+      "target": "frontend_src_components_imagepicker",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualWorkflow.test.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualworkflow_test",
+      "target": "frontend_src_components_imageupload",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualWorkflow.test.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualworkflow_test",
+      "target": "frontend_src_utils_images",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualWorkflow.test.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualworkflow_test",
+      "target": "frontend_src_utils_images_free_images",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualWorkflow.test.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualworkflow_test",
+      "target": "frontend_src_pages_visualworkflow_test_writersession",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualWorkflow.test.jsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualworkflow_test",
+      "target": "frontend_src_pages_visualworkflow_test_adminsession",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualWorkflow.test.jsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualworkflow_test",
+      "target": "frontend_src_pages_visualworkflow_test_visualpost",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualWorkflow.test.jsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualworkflow_test",
+      "target": "frontend_src_pages_visualworkflow_test_renderat",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualWorkflow.test.jsx",
+      "source_location": "L37",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4010,6 +4803,201 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_src_utils_seed",
+      "target": "frontend_src_utils_storage",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed",
+      "target": "frontend_src_utils_storage_getposts",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed",
+      "target": "frontend_src_utils_storage_getseedflag",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed",
+      "target": "frontend_src_utils_storage_saveposts",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed",
+      "target": "frontend_src_utils_storage_seed_key",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed",
+      "target": "frontend_src_utils_storage_setseedflag",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed",
+      "target": "frontend_src_utils_images",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed",
+      "target": "frontend_src_utils_images_free_images",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed",
+      "target": "frontend_src_utils_seed_seed_posts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed",
+      "target": "frontend_src_utils_seed_seediffirstrun",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed_test",
+      "target": "frontend_src_utils_images",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.test.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed_test",
+      "target": "frontend_src_utils_images_free_images",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.test.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed_test",
+      "target": "frontend_src_utils_seed",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed_test",
+      "target": "frontend_src_utils_seed_seediffirstrun",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed_test",
+      "target": "frontend_src_utils_storage",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.test.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed_test",
+      "target": "frontend_src_utils_storage_posts_key",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.test.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed_test",
+      "target": "frontend_src_utils_storage_seed_key",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.test.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed_test",
+      "target": "frontend_src_utils_seed_test_readstoredposts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/seed.test.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_src_utils_storage",
       "target": "frontend_src_utils_storage_posts_key",
       "relation": "contains",
@@ -4031,11 +5019,21 @@
     },
     {
       "source": "frontend_src_utils_storage",
+      "target": "frontend_src_utils_storage_seed_key",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/storage.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_storage",
       "target": "frontend_src_utils_storage_readarray",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/utils/storage.js",
-      "source_location": "L14",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4045,7 +5043,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/utils/storage.js",
-      "source_location": "L33",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4055,7 +5053,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/utils/storage.js",
-      "source_location": "L52",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4065,7 +5063,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/utils/storage.js",
-      "source_location": "L64",
+      "source_location": "L66",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4075,7 +5073,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/utils/storage.js",
-      "source_location": "L74",
+      "source_location": "L76",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4085,7 +5083,27 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/utils/storage.js",
-      "source_location": "L86",
+      "source_location": "L88",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_storage",
+      "target": "frontend_src_utils_storage_getseedflag",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/storage.js",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_storage",
+      "target": "frontend_src_utils_storage_setseedflag",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/storage.js",
+      "source_location": "L112",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4096,7 +5114,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/utils/storage.js",
-      "source_location": "L53",
+      "source_location": "L55",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4107,7 +5125,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/utils/storage.js",
-      "source_location": "L65",
+      "source_location": "L67",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4118,7 +5136,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/utils/storage.js",
-      "source_location": "L75",
+      "source_location": "L77",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4129,7 +5147,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/utils/storage.js",
-      "source_location": "L87",
+      "source_location": "L89",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4157,6 +5175,17 @@
     },
     {
       "source": "frontend_src_utils_storage_test",
+      "target": "frontend_src_utils_storage_getseedflag",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/storage.test.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_storage_test",
       "target": "frontend_src_utils_storage_getusers",
       "relation": "imports",
       "context": "import",
@@ -4191,6 +5220,28 @@
     {
       "source": "frontend_src_utils_storage_test",
       "target": "frontend_src_utils_storage_saveusers",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/storage.test.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_storage_test",
+      "target": "frontend_src_utils_storage_seed_key",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/storage.test.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_storage_test",
+      "target": "frontend_src_utils_storage_setseedflag",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -4477,12 +5528,62 @@
       "_origin": "ast"
     },
     {
+      "source": "plan_ordered_feature_slices",
+      "target": "plan_7_nolanai_inspired_visual_foundation_and_public_experience",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN.md",
+      "source_location": "L118",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "plan_7_nolanai_inspired_visual_foundation_and_public_experience",
+      "target": "plan_files_122",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "plan_ordered_feature_slices",
+      "target": "plan_8_nolanai_inspired_application_surfaces",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN.md",
+      "source_location": "L136",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "plan_8_nolanai_inspired_application_surfaces",
+      "target": "plan_files_140",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN.md",
+      "source_location": "L140",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "plan_writespace_brownfield_revision_plan",
+      "target": "plan_reference_evidence",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN.md",
+      "source_location": "L155",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "plan_writespace_brownfield_revision_plan",
       "target": "plan_risk_assessment",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PLAN.md",
-      "source_location": "L118",
+      "source_location": "L159",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4492,7 +5593,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PLAN.md",
-      "source_location": "L128",
+      "source_location": "L169",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4502,7 +5603,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PLAN.md",
-      "source_location": "L141",
+      "source_location": "L182",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4926,6 +6027,39 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_src_pages_imagerendering_test",
+      "target": "frontend_src_pages_home_home",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_imagerendering_test",
+      "target": "frontend_src_pages_landingpage_landingpage",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_imagerendering_test",
+      "target": "frontend_src_pages_readblog_readblog",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/ImageRendering.test.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_src_pages_landingpage",
       "target": "frontend_src_components_publicshell_publicshell",
       "relation": "imports",
@@ -4992,6 +6126,83 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_src_pages_visualreference_test",
+      "target": "frontend_src_components_authenticatedshell_authenticatedshell",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualReference.test.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualreference_test",
+      "target": "frontend_src_components_publicshell_publicshell",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualReference.test.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualreference_test",
+      "target": "frontend_src_components_themetoggle_themetoggle",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualReference.test.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualreference_test",
+      "target": "frontend_src_pages_landingpage_landingpage",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualReference.test.jsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualworkflow_test",
+      "target": "frontend_src_app_app",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualWorkflow.test.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualworkflow_test",
+      "target": "frontend_src_components_imagepicker_imagepicker",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualWorkflow.test.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_visualworkflow_test",
+      "target": "frontend_src_components_imageupload_imageupload",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/VisualWorkflow.test.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_src_pages_writeblog",
       "target": "frontend_src_components_authenticatedshell_authenticatedshell",
       "relation": "imports",
@@ -5031,7 +6242,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/App.jsx",
-      "source_location": "L24",
+      "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5184,7 +6395,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/Home.jsx",
-      "source_location": "L94",
+      "source_location": "L108",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5196,7 +6407,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/Home.jsx",
-      "source_location": "L105",
+      "source_location": "L119",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5208,7 +6419,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/Home.jsx",
-      "source_location": "L117",
+      "source_location": "L131",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5244,7 +6455,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/LandingPage.jsx",
-      "source_location": "L78",
+      "source_location": "L123",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5256,7 +6467,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/LandingPage.jsx",
-      "source_location": "L84",
+      "source_location": "L129",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5280,7 +6491,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/ReadBlog.jsx",
-      "source_location": "L35",
+      "source_location": "L38",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5292,7 +6503,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/ReadBlog.jsx",
-      "source_location": "L121",
+      "source_location": "L134",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5304,7 +6515,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/ReadBlog.jsx",
-      "source_location": "L128",
+      "source_location": "L160",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5379,13 +6590,61 @@
       "source_location": "L99",
       "weight": 1.0,
       "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed_seediffirstrun",
+      "target": "frontend_src_utils_storage_getseedflag",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/utils/seed.js",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed_seediffirstrun",
+      "target": "frontend_src_utils_storage_getposts",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/utils/seed.js",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed_seediffirstrun",
+      "target": "frontend_src_utils_storage_setseedflag",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/utils/seed.js",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_seed_seediffirstrun",
+      "target": "frontend_src_utils_storage_saveposts",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/utils/seed.js",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_origin": "ast"
     }
   ],
   "metadata": {
-    "built_at": "2026-09-03T10:54:25.495525+00:00",
+    "built_at": "2026-09-03T12:24:19.081018+00:00",
     "version": "graph_update-v1",
     "codebase_root": "C:\\Users\\Radheya\\Desktop\\sdlc_core\\mkt-nxs-project\\sdlc-api\\scripts\\developer_brownfield_smoke_out\\developer_brownfield_smoke\\dev-bf-smoke-20260903-095149-f5e8\\developer",
     "force": true,
-    "files_scanned": 50
+    "files_scanned": 59
   }
 }
