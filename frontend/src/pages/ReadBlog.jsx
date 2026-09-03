@@ -83,14 +83,14 @@ export default function ReadBlog() {
 
   return (
     <AuthenticatedShell session={session}>
-      <section className="mx-auto max-w-3xl px-5 py-12 dark:bg-slate-900 dark:text-slate-100 sm:px-8">
+      <section className="mx-auto max-w-4xl px-5 py-16 text-ink-950 dark:bg-slate-900 dark:text-slate-100 dark:!bg-ink-950 sm:px-8 sm:py-20">
         {!hasLoaded ? (
           <p className="text-slate-600 dark:text-slate-300" role="status">
             Loading story…
           </p>
         ) : !post ? (
-          <div className="rounded-lg border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100">
-            <h1 className="text-2xl font-semibold tracking-tight text-slate-950 dark:text-slate-100">
+          <div className="rounded-2xl border border-slate-200 border-black/5 bg-white p-8 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:!border-white/10 dark:!bg-ink-900">
+            <h1 className="text-3xl font-semibold tracking-tight text-slate-950 dark:text-slate-100">
               Post not found
             </h1>
             <p className="mt-3 text-slate-600 dark:text-slate-300">
@@ -98,13 +98,13 @@ export default function ReadBlog() {
             </p>
             <Link
               to="/blogs"
-              className="mt-6 inline-flex text-sm font-semibold text-indigo-700 hover:text-indigo-900 dark:text-indigo-300 dark:hover:text-indigo-200"
+              className="mt-6 inline-flex rounded-full text-sm font-semibold text-indigo-700 text-signal-600 transition-colors duration-200 hover:text-signal-700 dark:text-indigo-300 dark:!text-signal-500"
             >
               Back to stories
             </Link>
           </div>
         ) : (
-          <article className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100">
+          <article className="overflow-hidden rounded-2xl border border-slate-200 border-black/5 bg-white dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:!border-white/10 dark:!bg-ink-900">
             {typeof post.coverImage === "string" && post.coverImage && (
               <img
                 src={post.coverImage}
@@ -114,73 +114,75 @@ export default function ReadBlog() {
               />
             )}
             <div className="p-6 sm:p-10">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-700 dark:text-indigo-300">
-                Story
-              </p>
-            <h1 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 dark:text-slate-100 sm:text-4xl">
-              {post.title}
-            </h1>
-            <div className="mt-6 flex items-center gap-3 border-y border-slate-100 py-4 dark:border-slate-700">
-              <Avatar
-                displayName={post.authorName || "Unknown author"}
-                role={post.authorRole || "user"}
-              />
-              <div>
-                <p className="font-medium text-slate-800 dark:text-slate-100">
-                  {post.authorName || "Unknown author"}
+              <div className="mx-auto max-w-2xl">
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-700 text-signal-600 dark:text-indigo-300 dark:!text-signal-500">
+                  Story
                 </p>
-                <p className="text-sm text-slate-500 dark:text-slate-400">
-                  {formatPostDate(post.createdAt)}
-                </p>
-              </div>
-            </div>
-              <div className="mt-8 whitespace-pre-wrap leading-8 text-slate-700 dark:text-slate-300">
-                {post.content}
-              </div>
-              {galleryImages.length > 0 && (
-                <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
-                  {galleryImages.map((src, index) => (
-                    <a
-                      key={`${src}-${index}`}
-                      href={src}
-                      target="_blank"
-                      rel="noreferrer"
+                <h1 className="mt-3 text-[2.125rem] font-semibold leading-[1.12] tracking-tight text-slate-950 text-ink-950 dark:text-slate-100 sm:text-5xl">
+                  {post.title}
+                </h1>
+                <div className="mt-6 flex items-center gap-3 border-y border-slate-100 py-4 dark:border-slate-700">
+                  <Avatar
+                    displayName={post.authorName || "Unknown author"}
+                    role={post.authorRole || "user"}
+                  />
+                  <div>
+                    <p className="font-medium text-slate-800 dark:text-slate-100">
+                      {post.authorName || "Unknown author"}
+                    </p>
+                    <p className="text-sm text-slate-500 dark:text-slate-400">
+                      {formatPostDate(post.createdAt)}
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-8 whitespace-pre-wrap leading-8 text-slate-700 dark:text-slate-300">
+                  {post.content}
+                </div>
+                {galleryImages.length > 0 && (
+                  <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+                    {galleryImages.map((src, index) => (
+                      <a
+                        key={`${src}-${index}`}
+                        href={src}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src={src}
+                          alt={`Gallery image ${index + 1}`}
+                          loading="lazy"
+                          className="h-40 w-full rounded-xl border border-slate-200 object-cover dark:border-slate-700"
+                        />
+                      </a>
+                    ))}
+                  </div>
+                )}
+                {canManagePost(session, post) && (
+                  <div className="mt-10 flex flex-wrap gap-3 border-t border-slate-100 pt-6 dark:border-slate-700">
+                    <Link
+                      to={`/edit/${post.id}`}
+                      className="rounded-full bg-indigo-700 bg-signal-600 !bg-signal-500 px-4 py-2 text-sm font-semibold text-white transition-transform duration-200 hover:!bg-signal-600 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-signal-600 focus:ring-offset-2 dark:focus:ring-offset-ink-900"
                     >
-                      <img
-                        src={src}
-                        alt={`Gallery image ${index + 1}`}
-                        loading="lazy"
-                        className="h-40 w-full rounded-md border border-slate-200 object-cover dark:border-slate-700"
-                      />
-                    </a>
-                  ))}
-                </div>
-              )}
-              {canManagePost(session, post) && (
-                <div className="mt-10 flex flex-wrap gap-3 border-t border-slate-100 pt-6 dark:border-slate-700">
-                  <Link
-                    to={`/edit/${post.id}`}
-                    className="rounded-md bg-indigo-700 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-800"
+                      Edit story
+                    </Link>
+                    <button
+                      type="button"
+                      onClick={handleDelete}
+                      className="rounded-full border border-rose-300 px-4 py-2 text-sm font-semibold text-rose-700 transition-colors duration-200 hover:bg-rose-50 active:scale-[0.98] dark:border-rose-500 dark:text-rose-300 dark:hover:bg-rose-950"
+                    >
+                      Delete story
+                    </button>
+                  </div>
+                )}
+                {feedback && (
+                  <p
+                    className="mt-5 text-sm font-medium text-rose-700 dark:text-rose-300"
+                    role="alert"
                   >
-                    Edit story
-                  </Link>
-                  <button
-                    type="button"
-                    onClick={handleDelete}
-                    className="rounded-md border border-rose-300 px-4 py-2 text-sm font-semibold text-rose-700 hover:bg-rose-50 dark:border-rose-500 dark:text-rose-300 dark:hover:bg-rose-950"
-                  >
-                    Delete story
-                  </button>
-                </div>
-              )}
-              {feedback && (
-                <p
-                  className="mt-5 text-sm font-medium text-rose-700 dark:text-rose-300"
-                  role="alert"
-                >
-                  {feedback}
-                </p>
-              )}
+                    {feedback}
+                  </p>
+                )}
+              </div>
             </div>
           </article>
         )}

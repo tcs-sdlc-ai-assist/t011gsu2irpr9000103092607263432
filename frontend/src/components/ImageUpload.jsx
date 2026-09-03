@@ -89,9 +89,9 @@ export default function ImageUpload({
   return (
     <div
       aria-busy={isProcessing}
-      className="rounded-lg border border-slate-200 bg-white p-4 text-slate-900 dark:bg-slate-800 dark:text-slate-100 dark:border-slate-700"
+      className="rounded-2xl border border-black/5 bg-white p-4 text-slate-900 dark:bg-slate-800 dark:text-slate-100 dark:border-slate-700 dark:!border-white/10 dark:!bg-ink-900"
     >
-      <div className="rounded-md border border-dashed border-slate-300 p-4 dark:bg-slate-800 dark:text-slate-100 dark:border-slate-700">
+      <div className="rounded-xl border border-dashed border-slate-300 bg-slate-50/70 p-4 dark:bg-slate-800 dark:text-slate-100 dark:border-slate-700 dark:!bg-ink-900">
         <label
           htmlFor={inputId}
           className="block text-sm font-semibold text-slate-900 dark:text-slate-100"
@@ -107,7 +107,7 @@ export default function ImageUpload({
           aria-describedby={`${helpId}${error ? ` ${errorId}` : ""}`}
           aria-invalid={Boolean(error)}
           onChange={handleFiles}
-          className="mt-2 block w-full rounded-md border border-slate-300 bg-white text-sm text-slate-700 file:mr-3 file:border-0 file:bg-slate-100 file:px-3 file:py-2 file:font-medium file:text-slate-800 disabled:cursor-wait disabled:opacity-60 dark:bg-slate-800 dark:text-slate-100 dark:border-slate-700 dark:file:bg-slate-700 dark:file:text-slate-100"
+          className="mt-2 block w-full rounded-xl border border-slate-300 bg-white text-sm text-slate-700 outline-none focus:border-signal-600 focus:ring-2 focus:ring-signal-100 file:mr-3 file:rounded-full file:border-0 file:bg-signal-50 file:px-3 file:py-2 file:font-medium file:text-signal-700 disabled:cursor-wait disabled:opacity-60 dark:bg-slate-800 dark:text-slate-100 dark:border-slate-700 dark:!bg-ink-900 dark:focus:!border-signal-500 dark:focus:!ring-signal-600/30 dark:file:bg-slate-700 dark:file:text-slate-100 dark:file:!bg-ink-800"
         />
         <p id={helpId} className="mt-2 text-xs text-slate-600 dark:text-slate-300">
           Maximum 500 KB per image. Images are stored locally as base64 data.
@@ -141,7 +141,7 @@ export default function ImageUpload({
             return (
               <div
                 key={`${source}-${index}`}
-                className="relative overflow-hidden rounded-md border border-slate-300 dark:border-slate-700"
+                className="relative overflow-hidden rounded-xl border border-slate-300 dark:border-slate-700"
               >
                 <img
                   src={source}
@@ -153,7 +153,7 @@ export default function ImageUpload({
                   type="button"
                   aria-label={removeLabel}
                   onClick={() => handleRemove(index)}
-                  className="absolute right-2 top-2 rounded-md border border-slate-300 bg-white px-2 py-1 text-xs font-semibold text-slate-900 hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 dark:bg-slate-800 dark:text-slate-100 dark:border-slate-700 dark:hover:bg-slate-700"
+                  className="absolute right-2 top-2 rounded-full border border-white/20 bg-ink-900 px-2.5 py-1 text-xs font-semibold text-white transition-colors duration-200 hover:bg-ink-800 active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-signal-500 dark:bg-slate-800 dark:text-slate-100 dark:border-slate-700 dark:!bg-ink-900 dark:hover:!bg-ink-800"
                 >
                   Remove
                 </button>

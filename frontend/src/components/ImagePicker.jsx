@@ -38,9 +38,7 @@ export default function ImagePicker({
   };
 
   return (
-    <div
-      className="rounded-lg border border-slate-200 bg-white p-4 text-slate-900 dark:bg-slate-800 dark:text-slate-100 dark:border-slate-700"
-    >
+    <div className="rounded-2xl border border-black/5 bg-white p-4 text-slate-900 dark:bg-slate-800 dark:text-slate-100 dark:border-slate-700 dark:!border-white/10 dark:!bg-ink-900">
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
         {FREE_IMAGES.map((image) => {
           const isSelected = mode === "multi"
@@ -53,10 +51,10 @@ export default function ImagePicker({
               type="button"
               aria-pressed={isSelected}
               onClick={() => handleSelect(image.path)}
-              className={`overflow-hidden rounded-md border-2 bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 dark:bg-slate-800 dark:text-slate-100 ${
+              className={`overflow-hidden rounded-xl border-2 bg-slate-100 transition-transform duration-200 active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-signal-500 focus-visible:ring-offset-2 dark:bg-slate-800 dark:text-slate-100 dark:!bg-ink-900 ${
                 isSelected
-                  ? "border-violet-600 ring-2 ring-violet-300 dark:border-violet-400 dark:ring-violet-700"
-                  : "border-slate-200 hover:border-slate-400 dark:border-slate-700 dark:hover:border-slate-500"
+                  ? "border-signal-600 ring-2 ring-signal-200 dark:border-signal-500 dark:ring-signal-600/40"
+                  : "border-slate-200 hover:border-signal-400 dark:border-slate-700 dark:hover:border-signal-500"
               }`}
             >
               <img
