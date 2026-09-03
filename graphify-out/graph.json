@@ -1,6 +1,62 @@
 {
   "nodes": [
     {
+      "id": "changelog",
+      "label": "CHANGELOG.md",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "changelog_changelog",
+      "label": "Changelog",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "changelog_2026_09_03_brownfield_theme_media_seeding_and_visual_redesign",
+      "label": "2026-09-03 - Brownfield theme, media, seeding, and visual redesign",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "changelog_added",
+      "label": "Added",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "changelog_changed",
+      "label": "Changed",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L18",
+      "_origin": "ast"
+    },
+    {
+      "id": "changelog_compatibility_and_migration_notes",
+      "label": "Compatibility and migration notes",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "changelog_breaking_changes",
+      "label": "Breaking changes",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L35",
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_e2e_access_spec",
       "label": "access.spec.js",
       "file_type": "code",
@@ -1845,7 +1901,7 @@
       "label": "Routes",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L16",
+      "source_location": "L23",
       "_origin": "ast"
     },
     {
@@ -1853,7 +1909,7 @@
       "label": "Local development",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L32",
+      "source_location": "L39",
       "_origin": "ast"
     },
     {
@@ -1861,7 +1917,7 @@
       "label": "Tests",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L48",
+      "source_location": "L55",
       "_origin": "ast"
     },
     {
@@ -1869,7 +1925,7 @@
       "label": "Browser-local storage schemas",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L71",
+      "source_location": "L81",
       "_origin": "ast"
     },
     {
@@ -1877,7 +1933,7 @@
       "label": "Privacy and security limitations",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L81",
+      "source_location": "L95",
       "_origin": "ast"
     },
     {
@@ -1885,7 +1941,7 @@
       "label": "Vercel SPA routing",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L87",
+      "source_location": "L101",
       "_origin": "ast"
     },
     {
@@ -1893,7 +1949,7 @@
       "label": "License",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L91",
+      "source_location": "L105",
       "_origin": "ast"
     },
     {
@@ -1916,6 +1972,66 @@
     }
   ],
   "links": [
+    {
+      "source": "changelog",
+      "target": "changelog_changelog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "changelog_changelog",
+      "target": "changelog_2026_09_03_brownfield_theme_media_seeding_and_visual_redesign",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "changelog_2026_09_03_brownfield_theme_media_seeding_and_visual_redesign",
+      "target": "changelog_added",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "changelog_2026_09_03_brownfield_theme_media_seeding_and_visual_redesign",
+      "target": "changelog_changed",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "changelog_2026_09_03_brownfield_theme_media_seeding_and_visual_redesign",
+      "target": "changelog_compatibility_and_migration_notes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "changelog_2026_09_03_brownfield_theme_media_seeding_and_visual_redesign",
+      "target": "changelog_breaking_changes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
     {
       "source": "frontend_e2e_access_spec",
       "target": "frontend_e2e_access_spec_capturepageerrors",
@@ -5633,7 +5749,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L16",
+      "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5643,7 +5759,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L32",
+      "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5653,7 +5769,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L48",
+      "source_location": "L55",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5663,7 +5779,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L71",
+      "source_location": "L81",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5673,7 +5789,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L81",
+      "source_location": "L95",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5683,7 +5799,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L87",
+      "source_location": "L101",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5693,7 +5809,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L91",
+      "source_location": "L105",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -6641,10 +6757,10 @@
     }
   ],
   "metadata": {
-    "built_at": "2026-09-03T12:40:30.923682+00:00",
+    "built_at": "2026-09-03T12:49:58.328268+00:00",
     "version": "graph_update-v1",
     "codebase_root": "C:\\Users\\Radheya\\Desktop\\sdlc_core\\mkt-nxs-project\\sdlc-api\\scripts\\developer_brownfield_smoke_out\\developer_brownfield_smoke\\dev-bf-smoke-20260903-095149-f5e8\\developer",
     "force": true,
-    "files_scanned": 59
+    "files_scanned": 60
   }
 }
