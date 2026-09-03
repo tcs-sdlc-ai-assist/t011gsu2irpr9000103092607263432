@@ -13,10 +13,10 @@ import {
 } from "../utils/blog";
 
 const accentClasses = [
-  "border-amber-400",
-  "border-emerald-500",
-  "border-rose-400",
-  "border-cyan-500",
+  "border-indigo-500",
+  "border-violet-500",
+  "border-pink-500",
+  "border-teal-500",
 ];
 
 /**
@@ -88,40 +88,55 @@ export default function Home() {
             {posts.map((post, index) => (
               <article
                 key={post.id}
-                className={`flex flex-col border border-slate-200 border-t-4 ${accentClasses[index % accentClasses.length]} bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100`}
+                className={`flex flex-col overflow-hidden border border-slate-200 border-t-4 ${accentClasses[index % accentClasses.length]} bg-white shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100`}
               >
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-                  {formatPostDate(post.createdAt)}
-                </p>
-                <h2 className="mt-3 text-xl font-semibold tracking-tight text-slate-950 dark:text-slate-100">
-                  <Link
-                    to={`/blog/${post.id}`}
-                    className="hover:text-indigo-700 dark:hover:text-indigo-300"
-                  >
-                    {post.title}
-                  </Link>
-                </h2>
-                <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
-                  {getExcerpt(post.content)}
-                </p>
-                <div className="mt-6 flex items-center justify-between gap-3 border-t border-slate-100 pt-4 dark:border-slate-700">
-                  <div className="flex min-w-0 items-center gap-3">
-                    <Avatar
-                      displayName={post.authorName || "Unknown author"}
-                      role={post.authorRole || "user"}
-                    />
-                    <span className="truncate text-sm font-medium text-slate-700 dark:text-slate-300">
-                      {post.authorName || "Unknown author"}
-                    </span>
-                  </div>
-                  {canManagePost(session, post) && (
+                {typeof post.coverImage === "string" && post.coverImage ? (
+                  <img
+                    src={post.coverImage}
+                    alt={`${post.title || "Story"} cover`}
+                    loading="lazy"
+                    className="aspect-video w-full object-cover"
+                  />
+                ) : (
+                  <div
+                    aria-hidden="true"
+                    className="aspect-video w-full bg-gradient-to-r from-indigo-500 via-violet-500 to-pink-500"
+                  />
+                )}
+                <div className="flex flex-1 flex-col p-6">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                    {formatPostDate(post.createdAt)}
+                  </p>
+                  <h2 className="mt-3 text-xl font-semibold tracking-tight text-slate-950 dark:text-slate-100">
                     <Link
-                      to={`/edit/${post.id}`}
-                      className="text-sm font-semibold text-indigo-700 hover:text-indigo-900 dark:text-indigo-300 dark:hover:text-indigo-200"
+                      to={`/blog/${post.id}`}
+                      className="hover:text-indigo-700 dark:hover:text-indigo-300"
                     >
-                      Edit
+                      {post.title}
                     </Link>
-                  )}
+                  </h2>
+                  <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                    {getExcerpt(post.content)}
+                  </p>
+                  <div className="mt-auto flex items-center justify-between gap-3 border-t border-slate-100 pt-4 dark:border-slate-700">
+                    <div className="flex min-w-0 items-center gap-3">
+                      <Avatar
+                        displayName={post.authorName || "Unknown author"}
+                        role={post.authorRole || "user"}
+                      />
+                      <span className="truncate text-sm font-medium text-slate-700 dark:text-slate-300">
+                        {post.authorName || "Unknown author"}
+                      </span>
+                    </div>
+                    {canManagePost(session, post) && (
+                      <Link
+                        to={`/edit/${post.id}`}
+                        className="text-sm font-semibold text-indigo-700 hover:text-indigo-900 dark:text-indigo-300 dark:hover:text-indigo-200"
+                      >
+                        Edit
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </article>
             ))}

@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { BrowserRouter } from "react-router-dom";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
@@ -65,6 +65,22 @@ describe("WriteSpace application flow", () => {
       screen.getByLabelText("Content"),
       "This story moves from writing to reading through local persistence.",
     );
+    const coverSection = screen.getByRole("group", {
+      name: "Cover image (optional)",
+    });
+    const gallerySection = screen.getByRole("group", {
+      name: "Image gallery (optional)",
+    });
+    await user.click(
+      within(coverSection).getByRole("button", {
+        name: "Snow-capped mountains rising above a quiet valley",
+      }),
+    );
+    await user.click(
+      within(gallerySection).getByRole("button", {
+        name: "Ocean waves rolling toward a sunlit shore",
+      }),
+    );
     await user.click(screen.getByRole("button", { name: "Publish story" }));
 
     expect(
@@ -82,8 +98,17 @@ describe("WriteSpace application flow", () => {
         id: "integration-id",
         title: "A persisted integration story",
         authorName: "Integration Writer",
+        coverImage: "/images/free/mountains.jpg",
+        gallery: ["/images/free/ocean.jpg"],
       }),
     ]);
+    expect(
+      screen.getByAltText("A persisted integration story cover"),
+    ).toHaveAttribute("src", "/images/free/mountains.jpg");
+    expect(screen.getByAltText("Gallery image 1")).toHaveAttribute(
+      "src",
+      "/images/free/ocean.jpg",
+    );
 
     await user.click(screen.getAllByRole("link", { name: "Stories" })[0]);
     expect(
@@ -91,6 +116,9 @@ describe("WriteSpace application flow", () => {
         name: "A persisted integration story",
       }),
     ).toBeInTheDocument();
+    expect(
+      screen.getByAltText("A persisted integration story cover"),
+    ).toHaveAttribute("src", "/images/free/mountains.jpg");
     expect(JSON.parse(localStorage.getItem(SESSION_KEY))).toMatchObject({
       username: "integration-writer",
     });

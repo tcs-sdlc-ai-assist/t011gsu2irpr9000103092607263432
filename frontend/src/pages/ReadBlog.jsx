@@ -20,6 +20,9 @@ export default function ReadBlog() {
   const [post, setPost] = useState(null);
   const [hasLoaded, setHasLoaded] = useState(false);
   const [feedback, setFeedback] = useState("");
+  const galleryImages = Array.isArray(post?.gallery)
+    ? post.gallery.filter((item) => typeof item === "string" && item)
+    : [];
 
   /**
    * Load the requested local post whenever its route id changes.
@@ -101,10 +104,19 @@ export default function ReadBlog() {
             </Link>
           </div>
         ) : (
-          <article className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 sm:p-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-700 dark:text-indigo-300">
-              Story
-            </p>
+          <article className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100">
+            {typeof post.coverImage === "string" && post.coverImage && (
+              <img
+                src={post.coverImage}
+                alt={`${post.title || "Story"} cover`}
+                loading="lazy"
+                className="aspect-video w-full object-cover"
+              />
+            )}
+            <div className="p-6 sm:p-10">
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-700 dark:text-indigo-300">
+                Story
+              </p>
             <h1 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 dark:text-slate-100 sm:text-4xl">
               {post.title}
             </h1>
@@ -122,34 +134,54 @@ export default function ReadBlog() {
                 </p>
               </div>
             </div>
-            <div className="mt-8 whitespace-pre-wrap leading-8 text-slate-700 dark:text-slate-300">
-              {post.content}
-            </div>
-            {canManagePost(session, post) && (
-              <div className="mt-10 flex flex-wrap gap-3 border-t border-slate-100 pt-6 dark:border-slate-700">
-                <Link
-                  to={`/edit/${post.id}`}
-                  className="rounded-md bg-indigo-700 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-800"
-                >
-                  Edit story
-                </Link>
-                <button
-                  type="button"
-                  onClick={handleDelete}
-                  className="rounded-md border border-rose-300 px-4 py-2 text-sm font-semibold text-rose-700 hover:bg-rose-50 dark:border-rose-500 dark:text-rose-300 dark:hover:bg-rose-950"
-                >
-                  Delete story
-                </button>
+              <div className="mt-8 whitespace-pre-wrap leading-8 text-slate-700 dark:text-slate-300">
+                {post.content}
               </div>
-            )}
-            {feedback && (
-              <p
-                className="mt-5 text-sm font-medium text-rose-700 dark:text-rose-300"
-                role="alert"
-              >
-                {feedback}
-              </p>
-            )}
+              {galleryImages.length > 0 && (
+                <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+                  {galleryImages.map((src, index) => (
+                    <a
+                      key={`${src}-${index}`}
+                      href={src}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src={src}
+                        alt={`Gallery image ${index + 1}`}
+                        loading="lazy"
+                        className="h-40 w-full rounded-md border border-slate-200 object-cover dark:border-slate-700"
+                      />
+                    </a>
+                  ))}
+                </div>
+              )}
+              {canManagePost(session, post) && (
+                <div className="mt-10 flex flex-wrap gap-3 border-t border-slate-100 pt-6 dark:border-slate-700">
+                  <Link
+                    to={`/edit/${post.id}`}
+                    className="rounded-md bg-indigo-700 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-800"
+                  >
+                    Edit story
+                  </Link>
+                  <button
+                    type="button"
+                    onClick={handleDelete}
+                    className="rounded-md border border-rose-300 px-4 py-2 text-sm font-semibold text-rose-700 hover:bg-rose-50 dark:border-rose-500 dark:text-rose-300 dark:hover:bg-rose-950"
+                  >
+                    Delete story
+                  </button>
+                </div>
+              )}
+              {feedback && (
+                <p
+                  className="mt-5 text-sm font-medium text-rose-700 dark:text-rose-300"
+                  role="alert"
+                >
+                  {feedback}
+                </p>
+              )}
+            </div>
           </article>
         )}
       </section>

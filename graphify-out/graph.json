@@ -166,6 +166,49 @@
       "_origin": "ast"
     },
     {
+      "id": "frontend_e2e_image_authoring_spec",
+      "label": "image-authoring.spec.js",
+      "file_type": "code",
+      "source_file": "frontend/e2e/image-authoring.spec.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_image_authoring_spec_session",
+      "label": "session",
+      "file_type": "code",
+      "source_file": "frontend/e2e/image-authoring.spec.js",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_image_authoring_spec_capturepageerrors",
+      "label": "capturePageErrors()",
+      "file_type": "code",
+      "source_file": "frontend/e2e/image-authoring.spec.js",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_image_authoring_spec_seedstorage",
+      "label": "seedStorage()",
+      "file_type": "code",
+      "source_file": "frontend/e2e/image-authoring.spec.js",
+      "source_location": "L21",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_image_authoring_spec_readposts",
+      "label": "readPosts()",
+      "file_type": "code",
+      "source_file": "frontend/e2e/image-authoring.spec.js",
+      "source_location": "L35",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_e2e_theme_spec",
       "label": "theme.spec.js",
       "file_type": "code",
@@ -595,6 +638,24 @@
       "community": 4
     },
     {
+      "id": "frontend_src_pages_blogpages_test_getstoredposts",
+      "label": "getStoredPosts()",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/BlogPages.test.jsx",
+      "source_location": "L38",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_pages_blogpages_test_fillrequiredfields",
+      "label": "fillRequiredFields()",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/BlogPages.test.jsx",
+      "source_location": "L43",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_src_pages_darkmodepages_test",
       "label": "DarkModePages.test.jsx",
       "file_type": "code",
@@ -811,7 +872,7 @@
       "label": "createPostId()",
       "file_type": "code",
       "source_file": "frontend/src/pages/WriteBlog.jsx",
-      "source_location": "L15",
+      "source_location": "L17",
       "_callable": true,
       "_origin": "ast",
       "community": 3
@@ -821,7 +882,7 @@
       "label": "WriteBlog()",
       "file_type": "code",
       "source_file": "frontend/src/pages/WriteBlog.jsx",
-      "source_location": "L27",
+      "source_location": "L29",
       "_callable": true,
       "_origin": "ast",
       "community": 3
@@ -1672,6 +1733,46 @@
       "confidence": "EXTRACTED",
       "source_file": "frontend/e2e/dark-pages.spec.js",
       "source_location": "L94",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_image_authoring_spec",
+      "target": "frontend_e2e_image_authoring_spec_session",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/image-authoring.spec.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_image_authoring_spec",
+      "target": "frontend_e2e_image_authoring_spec_capturepageerrors",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/image-authoring.spec.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_image_authoring_spec",
+      "target": "frontend_e2e_image_authoring_spec_seedstorage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/image-authoring.spec.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_image_authoring_spec",
+      "target": "frontend_e2e_image_authoring_spec_readposts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/image-authoring.spec.js",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -2640,6 +2741,26 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_src_pages_blogpages_test",
+      "target": "frontend_src_pages_blogpages_test_getstoredposts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/BlogPages.test.jsx",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_blogpages_test",
+      "target": "frontend_src_pages_blogpages_test_fillrequiredfields",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/BlogPages.test.jsx",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_src_pages_darkmodepages_test",
       "target": "frontend_src_app",
       "relation": "imports_from",
@@ -3330,12 +3451,34 @@
     },
     {
       "source": "frontend_src_pages_writeblog",
-      "target": "frontend_src_utils_auth",
+      "target": "frontend_src_components_imagepicker",
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/pages/WriteBlog.jsx",
       "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_writeblog",
+      "target": "frontend_src_components_imageupload",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/WriteBlog.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_writeblog",
+      "target": "frontend_src_utils_auth",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/WriteBlog.jsx",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3346,7 +3489,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/pages/WriteBlog.jsx",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3357,7 +3500,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/pages/WriteBlog.jsx",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3368,7 +3511,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/pages/WriteBlog.jsx",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3379,7 +3522,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/pages/WriteBlog.jsx",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3390,7 +3533,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/pages/WriteBlog.jsx",
-      "source_location": "L7",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3401,7 +3544,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/pages/WriteBlog.jsx",
-      "source_location": "L7",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3412,7 +3555,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/pages/WriteBlog.jsx",
-      "source_location": "L7",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3422,7 +3565,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/pages/WriteBlog.jsx",
-      "source_location": "L15",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3432,7 +3575,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/pages/WriteBlog.jsx",
-      "source_location": "L27",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4860,6 +5003,28 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_src_pages_writeblog",
+      "target": "frontend_src_components_imagepicker_imagepicker",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/WriteBlog.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_pages_writeblog",
+      "target": "frontend_src_components_imageupload_imageupload",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/WriteBlog.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_src_app_protectedplaceholder",
       "target": "frontend_src_utils_auth_getsession",
       "relation": "calls",
@@ -5175,7 +5340,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/WriteBlog.jsx",
-      "source_location": "L31",
+      "source_location": "L33",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5187,7 +5352,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/WriteBlog.jsx",
-      "source_location": "L47",
+      "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5199,7 +5364,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/WriteBlog.jsx",
-      "source_location": "L50",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5217,10 +5382,10 @@
     }
   ],
   "metadata": {
-    "built_at": "2026-09-03T10:46:05.079310+00:00",
+    "built_at": "2026-09-03T10:54:25.495525+00:00",
     "version": "graph_update-v1",
     "codebase_root": "C:\\Users\\Radheya\\Desktop\\sdlc_core\\mkt-nxs-project\\sdlc-api\\scripts\\developer_brownfield_smoke_out\\developer_brownfield_smoke\\dev-bf-smoke-20260903-095149-f5e8\\developer",
     "force": true,
-    "files_scanned": 49
+    "files_scanned": 50
   }
 }

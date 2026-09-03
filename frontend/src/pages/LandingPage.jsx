@@ -72,23 +72,33 @@ export default function LandingPage() {
             {posts.map((post) => (
               <article
                 key={post.id}
-                className="border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
+                className="overflow-hidden border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
               >
-                <p className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
-                  {formatPostDate(post.createdAt)}
-                </p>
-                <h3 className="mt-3 text-lg font-semibold dark:text-slate-100">
-                  {post.title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
-                  {getExcerpt(post.content)}
-                </p>
-                <Link
-                  to={`/blog/${post.id}`}
-                  className="mt-5 inline-block text-sm font-semibold text-indigo-700 hover:text-indigo-900 dark:text-indigo-300 dark:hover:text-indigo-200"
-                >
-                  Read story
-                </Link>
+                {typeof post.coverImage === "string" && post.coverImage && (
+                  <img
+                    src={post.coverImage}
+                    alt={`${post.title || "Story"} cover`}
+                    loading="lazy"
+                    className="aspect-video w-full object-cover"
+                  />
+                )}
+                <div className="p-6">
+                  <p className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                    {formatPostDate(post.createdAt)}
+                  </p>
+                  <h3 className="mt-3 text-lg font-semibold dark:text-slate-100">
+                    {post.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                    {getExcerpt(post.content)}
+                  </p>
+                  <Link
+                    to={`/blog/${post.id}`}
+                    className="mt-5 inline-block text-sm font-semibold text-indigo-700 hover:text-indigo-900 dark:text-indigo-300 dark:hover:text-indigo-200"
+                  >
+                    Read story
+                  </Link>
+                </div>
               </article>
             ))}
           </div>
