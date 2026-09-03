@@ -1,0 +1,270 @@
+{
+  "communities": {
+    "0": [
+      "frontend_src_app",
+      "frontend_src_app_app",
+      "frontend_src_app_protectedplaceholder",
+      "frontend_src_components_authenticatedshell",
+      "frontend_src_components_authenticatedshell_authenticatedshell",
+      "frontend_src_components_avatar",
+      "frontend_src_components_avatar_avatar",
+      "frontend_src_components_protectedroute",
+      "frontend_src_components_protectedroute_protectedroute",
+      "frontend_src_main",
+      "frontend_src_pages_accesspages_test",
+      "frontend_src_pages_accesspages_test_renderat",
+      "frontend_src_pages_loginpage",
+      "frontend_src_pages_loginpage_loginpage",
+      "frontend_src_utils_auth",
+      "frontend_src_utils_auth_authenticate",
+      "frontend_src_utils_auth_clearsession",
+      "frontend_src_utils_auth_getsession",
+      "frontend_src_utils_auth_normalizesession",
+      "frontend_src_utils_auth_session_key",
+      "frontend_src_utils_auth_setsession",
+      "frontend_src_utils_auth_test"
+    ],
+    "1": [
+      "frontend_src_components_publicshell",
+      "frontend_src_components_publicshell_publicshell",
+      "frontend_src_pages_registerpage",
+      "frontend_src_pages_registerpage_createuserid",
+      "frontend_src_pages_registerpage_registerpage",
+      "frontend_src_utils_storage",
+      "frontend_src_utils_storage_getposts",
+      "frontend_src_utils_storage_getusers",
+      "frontend_src_utils_storage_posts_key",
+      "frontend_src_utils_storage_readarray",
+      "frontend_src_utils_storage_saveposts",
+      "frontend_src_utils_storage_saveusers",
+      "frontend_src_utils_storage_users_key",
+      "frontend_src_utils_storage_writearray"
+    ],
+    "2": [
+      "frontend_package",
+      "frontend_package_name",
+      "frontend_package_private",
+      "frontend_package_scripts",
+      "frontend_package_scripts_build",
+      "frontend_package_scripts_dev",
+      "frontend_package_scripts_test",
+      "frontend_package_type",
+      "frontend_package_version"
+    ],
+    "3": [
+      "frontend_package_dependencies",
+      "frontend_package_dependencies_prop_types",
+      "frontend_package_dependencies_react",
+      "frontend_package_dependencies_react_dom",
+      "frontend_package_dependencies_react_router_dom",
+      "prop_types",
+      "react",
+      "react_dom",
+      "react_router_dom"
+    ],
+    "4": [
+      "frontend_src_pages_landingpage",
+      "frontend_src_pages_landingpage_landingpage",
+      "frontend_src_utils_blog",
+      "frontend_src_utils_blog_canmanagepost",
+      "frontend_src_utils_blog_formatpostdate",
+      "frontend_src_utils_blog_getexcerpt",
+      "frontend_src_utils_blog_sortpostsnewestfirst",
+      "frontend_src_utils_blog_validatepost"
+    ],
+    "5": [
+      "frontend_package_devdependencies",
+      "frontend_package_devdependencies_testing_library_jest_dom",
+      "frontend_package_devdependencies_testing_library_react",
+      "testing_library_jest_dom",
+      "testing_library_react"
+    ],
+    "6": [
+      "autoprefixer",
+      "frontend_package_devdependencies_autoprefixer"
+    ],
+    "7": [
+      "frontend_e2e_access_spec",
+      "frontend_e2e_access_spec_capturepageerrors"
+    ],
+    "8": [
+      "frontend_package_devdependencies_jsdom",
+      "jsdom"
+    ],
+    "9": [
+      "frontend_package_devdependencies_playwright_test",
+      "playwright_test"
+    ],
+    "10": [
+      "frontend_package_devdependencies_postcss",
+      "postcss"
+    ],
+    "11": [
+      "frontend_package_devdependencies_tailwindcss",
+      "tailwindcss"
+    ],
+    "12": [
+      "frontend_package_devdependencies_testing_library_user_event",
+      "testing_library_user_event"
+    ],
+    "13": [
+      "frontend_package_devdependencies_vite",
+      "vite"
+    ],
+    "14": [
+      "frontend_package_devdependencies_vitejs_plugin_react",
+      "vitejs_plugin_react"
+    ],
+    "15": [
+      "frontend_package_devdependencies_vitest",
+      "vitest"
+    ],
+    "16": [
+      "frontend_postcss_config"
+    ],
+    "17": [
+      "frontend_src_test_setup"
+    ],
+    "18": [
+      "frontend_tailwind_config"
+    ],
+    "19": [
+      "frontend_vite_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.19047619047619047,
+    "1": 0.21978021978021978,
+    "2": 0.2222222222222222,
+    "3": 0.2222222222222222,
+    "4": 0.4642857142857143,
+    "5": 0.4,
+    "6": 1.0,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0
+  },
+  "gods": [
+    {
+      "id": "frontend_src_utils_auth_getsession",
+      "label": "getSession()",
+      "degree": 7
+    },
+    {
+      "id": "frontend_src_pages_landingpage_landingpage",
+      "label": "LandingPage()",
+      "degree": 6
+    },
+    {
+      "id": "frontend_src_utils_auth_setsession",
+      "label": "setSession()",
+      "degree": 5
+    },
+    {
+      "id": "frontend_src_utils_auth_authenticate",
+      "label": "authenticate()",
+      "degree": 5
+    },
+    {
+      "id": "frontend_src_utils_storage_getusers",
+      "label": "getUsers()",
+      "degree": 5
+    },
+    {
+      "id": "frontend_package_scripts",
+      "label": "scripts",
+      "degree": 4
+    },
+    {
+      "id": "frontend_src_components_publicshell_publicshell",
+      "label": "PublicShell()",
+      "degree": 4
+    },
+    {
+      "id": "frontend_src_utils_auth_normalizesession",
+      "label": "normalizeSession()",
+      "degree": 4
+    },
+    {
+      "id": "frontend_src_utils_storage_getposts",
+      "label": "getPosts()",
+      "degree": 4
+    },
+    {
+      "id": "frontend_src_app_app",
+      "label": "App()",
+      "degree": 3
+    }
+  ],
+  "surprises": [
+    {
+      "source": "ProtectedPlaceholder()",
+      "target": "getSession()",
+      "source_files": [
+        "frontend/src/App.jsx",
+        "frontend/src/utils/auth.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "peripheral node `ProtectedPlaceholder()` unexpectedly reaches hub `getSession()`"
+    },
+    {
+      "source": "LandingPage()",
+      "target": "getPosts()",
+      "source_files": [
+        "frontend/src/pages/LandingPage.jsx",
+        "frontend/src/utils/storage.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "authenticate()",
+      "target": "getUsers()",
+      "source_files": [
+        "frontend/src/utils/auth.js",
+        "frontend/src/utils/storage.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "ProtectedRoute()",
+      "target": "getSession()",
+      "source_files": [
+        "frontend/src/components/ProtectedRoute.jsx",
+        "frontend/src/utils/auth.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "LandingPage()",
+      "target": "formatPostDate()",
+      "source_files": [
+        "frontend/src/pages/LandingPage.jsx",
+        "frontend/src/utils/blog.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}
