@@ -20,7 +20,7 @@ test('a visitor can register and reach protected stories without browser errors'
   await page.getByRole('button', { name: 'Create account' }).click();
 
   await expect(page.getByRole('heading', { name: 'Stories' })).toBeVisible();
-  await expect(page.getByText('This section will be available in its dedicated feature release.')).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'No stories yet' })).toBeVisible();
   expect(errors).toEqual([]);
 });
 
