@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 /**
  * Render a compact initials avatar with a role-specific color treatment.
@@ -10,22 +10,17 @@ import PropTypes from 'prop-types';
  *   An accessible avatar marker.
  */
 export default function Avatar({ displayName, role }) {
-  const initials = String(displayName || '?')
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0])
-    .join('')
-    .toUpperCase();
+  const isAdmin = role === "Admin";
+  const marker = isAdmin ? "Crown" : "Book";
 
   return (
     <span
-      aria-label={`${displayName} avatar`}
-      className={`inline-flex h-9 w-9 items-center justify-center rounded-full text-sm font-semibold text-white ${
-        role === 'Admin' ? 'bg-violet-600' : 'bg-indigo-500'
+      aria-label={`${displayName} ${marker} avatar`}
+      className={`inline-flex h-9 w-9 items-center justify-center rounded-full text-xs font-semibold text-white ${
+        isAdmin ? "bg-violet-600" : "bg-indigo-500"
       }`}
     >
-      {initials}
+      {marker}
     </span>
   );
 }

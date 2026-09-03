@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import { Navigate, useLocation } from 'react-router-dom';
-import { getSession } from '../utils/auth';
+import PropTypes from "prop-types";
+import { Navigate, useLocation } from "react-router-dom";
+import { getSession } from "../utils/auth";
 
 /**
  * Gate a route by session and optionally restrict it to administrators.
@@ -19,7 +19,7 @@ export default function ProtectedRoute({ children, role = null }) {
     return <Navigate to="/login" replace state={{ from: location.pathname }} />;
   }
 
-  if (role === 'Admin' && session.role !== 'Admin') {
+  if (role === "Admin" && session.role !== "Admin") {
     return <Navigate to="/blogs" replace />;
   }
 
@@ -30,4 +30,3 @@ ProtectedRoute.propTypes = {
   children: PropTypes.node.isRequired,
   role: PropTypes.string,
 };
-

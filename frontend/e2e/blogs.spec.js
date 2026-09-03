@@ -16,7 +16,9 @@ function capturePageErrors(page) {
 async function seedAuthenticatedStorage(page) {
   await page.addInitScript((localSession) => {
     localStorage.setItem('writespace_session', JSON.stringify(localSession));
-    localStorage.setItem('writespace_posts', '[]');
+    if (localStorage.getItem('writespace_posts') === null) {
+      localStorage.setItem('writespace_posts', '[]');
+    }
   }, session);
 }
 
@@ -40,7 +42,31 @@ test('an authenticated writer can create, reload, read, edit, and delete a story
 
   page.once('dialog', (dialog) => dialog.accept());
   await page.getByRole('button', { name: 'Delete story' }).click();
-  await expect(page.getByRole('heading', { name: 'Stories' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Stories', exact: true })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'No stories yet' })).toBeVisible();
+  expect(errors).toEqual([]);
+});
+
+test('a seeded reader shows loading status before resolving a local story', async ({ page }) => {
+  const errors = capturePageErrors(page);
+  await page.addInitScript((localSession) => {
+    globalThis.__WRITESPACE_LOAD_DELAY__ = 1500;
+    localStorage.setItem('writespace_session', JSON.stringify(localSession));
+    localStorage.setItem('writespace_posts', JSON.stringify([
+      {
+        id: 'loading-story',
+        title: 'Loading local story',
+        content: 'Resolved reader content.',
+        authorId: localSession.userId,
+        authorName: localSession.displayName,
+        createdAt: '2025-02-01T00:00:00.000Z',
+      },
+    ]));
+  }, session);
+
+  await page.goto('/blog/loading-story');
+  await expect(page.getByText('Loading story…', { exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Loading local story' })).toBeVisible();
+  await expect(page.getByText('Resolved reader content.')).toBeVisible();
   expect(errors).toEqual([]);
 });
