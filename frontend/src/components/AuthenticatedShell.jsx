@@ -42,7 +42,7 @@ export default function AuthenticatedShell({ children, session }) {
           </button>
           <nav className="hidden items-center gap-5 md:flex" aria-label="Authenticated navigation">
             <NavLink to="/blogs" className={linkClass}>Stories</NavLink>
-            <NavLink to="/posts/new" className={linkClass}>Write</NavLink>
+            <NavLink to="/write" className={linkClass}>Write</NavLink>
             {session.role === 'Admin' && <NavLink to="/admin" className={linkClass}>Admin</NavLink>}
             <Avatar displayName={session.displayName} role={session.role} />
             <button type="button" className="text-sm font-medium text-slate-600 hover:text-slate-950" onClick={handleLogout}>Log out</button>
@@ -52,7 +52,7 @@ export default function AuthenticatedShell({ children, session }) {
           <nav className="border-t border-slate-200 px-5 py-4 md:hidden" aria-label="Mobile authenticated navigation">
             <div className="mx-auto flex max-w-6xl flex-col gap-4">
               <NavLink to="/blogs" className={linkClass} onClick={() => setIsMenuOpen(false)}>Stories</NavLink>
-              <NavLink to="/posts/new" className={linkClass} onClick={() => setIsMenuOpen(false)}>Write</NavLink>
+              <NavLink to="/write" className={linkClass} onClick={() => setIsMenuOpen(false)}>Write</NavLink>
               {session.role === 'Admin' && <NavLink to="/admin" className={linkClass} onClick={() => setIsMenuOpen(false)}>Admin</NavLink>}
               <button type="button" className="w-fit text-sm font-medium text-slate-600" onClick={handleLogout}>Log out</button>
             </div>
