@@ -292,6 +292,66 @@
       "community": 6
     },
     {
+      "id": "frontend_src_components_imagecontrols_test",
+      "label": "ImageControls.test.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/components/ImageControls.test.jsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_components_imagecontrols_test_pickerharness",
+      "label": "PickerHarness()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/ImageControls.test.jsx",
+      "source_location": "L26",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_components_imagecontrols_test_uploadharness",
+      "label": "UploadHarness()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/ImageControls.test.jsx",
+      "source_location": "L40",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_components_imagepicker",
+      "label": "ImagePicker.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/components/ImagePicker.jsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_components_imagepicker_imagepicker",
+      "label": "ImagePicker()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/ImagePicker.jsx",
+      "source_location": "L13",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_components_imageupload",
+      "label": "ImageUpload.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/components/ImageUpload.jsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_components_imageupload_imageupload",
+      "label": "ImageUpload()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/ImageUpload.jsx",
+      "source_location": "L14",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_src_components_protectedroute",
       "label": "ProtectedRoute.jsx",
       "file_type": "code",
@@ -919,6 +979,112 @@
       "source_location": "L1",
       "_origin": "ast",
       "community": 3
+    },
+    {
+      "id": "frontend_src_utils_images",
+      "label": "images.js",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/images.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_utils_images_max_upload_bytes",
+      "label": "MAX_UPLOAD_BYTES",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/images.js",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_utils_images_free_images",
+      "label": "FREE_IMAGES",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/images.js",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_utils_images_filetodataurl",
+      "label": "fileToDataUrl()",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/images.js",
+      "source_location": "L72",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_utils_images_test",
+      "label": "images.test.js",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_utils_images_test_expectedcatalogue",
+      "label": "expectedCatalogue",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_utils_images_test_successfulfilereader",
+      "label": "SuccessfulFileReader",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L100",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_utils_images_test_successfulfilereader_readasdataurl",
+      "label": ".readAsDataURL()",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L101",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_utils_images_test_failingfilereader",
+      "label": "FailingFileReader",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L126",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_utils_images_test_failingfilereader_readasdataurl",
+      "label": ".readAsDataURL()",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L127",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_utils_images_test_nonstringfilereader",
+      "label": "NonStringFileReader",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L139",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_utils_images_test_nonstringfilereader_readasdataurl",
+      "label": ".readAsDataURL()",
+      "file_type": "code",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L140",
+      "_callable": true,
+      "_origin": "ast"
     },
     {
       "id": "frontend_src_utils_storage",
@@ -1752,6 +1918,145 @@
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/components/Avatar.jsx",
       "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_components_imagecontrols_test",
+      "target": "frontend_src_components_imagepicker",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ImageControls.test.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_components_imagecontrols_test",
+      "target": "frontend_src_components_imageupload",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ImageControls.test.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_components_imagecontrols_test",
+      "target": "frontend_src_utils_images",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ImageControls.test.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_components_imagecontrols_test",
+      "target": "frontend_src_utils_images_free_images",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ImageControls.test.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_components_imagecontrols_test",
+      "target": "frontend_src_utils_images_filetodataurl",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ImageControls.test.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_components_imagecontrols_test",
+      "target": "frontend_src_components_imagecontrols_test_pickerharness",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ImageControls.test.jsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_components_imagecontrols_test",
+      "target": "frontend_src_components_imagecontrols_test_uploadharness",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ImageControls.test.jsx",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_components_imagepicker",
+      "target": "frontend_src_utils_images",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ImagePicker.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_components_imagepicker",
+      "target": "frontend_src_utils_images_free_images",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ImagePicker.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_components_imagepicker",
+      "target": "frontend_src_components_imagepicker_imagepicker",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ImagePicker.jsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_components_imageupload",
+      "target": "frontend_src_utils_images",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ImageUpload.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_components_imageupload",
+      "target": "frontend_src_utils_images_filetodataurl",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ImageUpload.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_components_imageupload",
+      "target": "frontend_src_components_imageupload_imageupload",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ImageUpload.jsx",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3418,6 +3723,150 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_src_utils_images",
+      "target": "frontend_src_utils_images_max_upload_bytes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/images.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_images",
+      "target": "frontend_src_utils_images_free_images",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/images.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_images",
+      "target": "frontend_src_utils_images_filetodataurl",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/images.js",
+      "source_location": "L72",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_images_test",
+      "target": "frontend_src_utils_images",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_images_test",
+      "target": "frontend_src_utils_images_free_images",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_images_test",
+      "target": "frontend_src_utils_images_max_upload_bytes",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_images_test",
+      "target": "frontend_src_utils_images_filetodataurl",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_images_test",
+      "target": "frontend_src_utils_images_test_expectedcatalogue",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_images_test",
+      "target": "frontend_src_utils_images_test_successfulfilereader",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_images_test_successfulfilereader",
+      "target": "frontend_src_utils_images_test_successfulfilereader_readasdataurl",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L101",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_images_test",
+      "target": "frontend_src_utils_images_test_failingfilereader",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L126",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_images_test_failingfilereader",
+      "target": "frontend_src_utils_images_test_failingfilereader_readasdataurl",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L127",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_images_test",
+      "target": "frontend_src_utils_images_test_nonstringfilereader",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L139",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_utils_images_test_nonstringfilereader",
+      "target": "frontend_src_utils_images_test_nonstringfilereader_readasdataurl",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/utils/images.test.js",
+      "source_location": "L140",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_src_utils_storage",
       "target": "frontend_src_utils_storage_posts_key",
       "relation": "contains",
@@ -4147,6 +4596,28 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_src_components_imagecontrols_test",
+      "target": "frontend_src_components_imagepicker_imagepicker",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ImageControls.test.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_components_imagecontrols_test",
+      "target": "frontend_src_components_imageupload_imageupload",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/ImageControls.test.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_src_components_publicshell",
       "target": "frontend_src_components_themetoggle_themetoggle",
       "relation": "imports",
@@ -4429,6 +4900,30 @@
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/pages/AdminDashboard.jsx",
       "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_components_imageupload_imageupload",
+      "target": "frontend_src_utils_images_filetodataurl",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "frontend/src/components/ImageUpload.jsx",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_components_imageupload_imageupload",
+      "target": "frontend_src_utils_images_filetodataurl",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/components/ImageUpload.jsx",
+      "source_location": "L53",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4722,10 +5217,10 @@
     }
   ],
   "metadata": {
-    "built_at": "2026-09-03T10:40:48.777612+00:00",
+    "built_at": "2026-09-03T10:46:05.079310+00:00",
     "version": "graph_update-v1",
     "codebase_root": "C:\\Users\\Radheya\\Desktop\\sdlc_core\\mkt-nxs-project\\sdlc-api\\scripts\\developer_brownfield_smoke_out\\developer_brownfield_smoke\\dev-bf-smoke-20260903-095149-f5e8\\developer",
     "force": true,
-    "files_scanned": 44
+    "files_scanned": 49
   }
 }

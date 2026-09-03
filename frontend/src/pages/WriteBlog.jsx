@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import AuthenticatedShell from "../components/AuthenticatedShell";
+import ImagePicker from "../components/ImagePicker";
+import ImageUpload from "../components/ImageUpload";
 import { getSession } from "../utils/auth";
 import { getPosts, savePosts } from "../utils/storage";
 import { canManagePost, validatePost } from "../utils/blog";
@@ -31,6 +33,8 @@ export default function WriteBlog() {
   const session = getSession();
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [coverImage, setCoverImage] = useState("");
+  const [gallery, setGallery] = useState([]);
   const [errors, setErrors] = useState({});
   const [feedback, setFeedback] = useState("");
   const [isReady, setIsReady] = useState(!isEditing);
@@ -53,6 +57,14 @@ export default function WriteBlog() {
     }
     setTitle(target.title || "");
     setContent(target.content || "");
+    setCoverImage(
+      typeof target.coverImage === "string" ? target.coverImage : "",
+    );
+    setGallery(
+      Array.isArray(target.gallery)
+        ? target.gallery.filter((item) => typeof item === "string")
+        : [],
+    );
     setIsReady(true);
   }, [id, isEditing, navigate]);
 
@@ -90,6 +102,8 @@ export default function WriteBlog() {
         ...original,
         title: title.trim(),
         content: content.trim(),
+        coverImage,
+        gallery: [...gallery],
       };
       if (
         !savePosts(
@@ -109,6 +123,8 @@ export default function WriteBlog() {
       id: createPostId(),
       title: title.trim(),
       content: content.trim(),
+      coverImage,
+      gallery: [...gallery],
       authorId: currentSession.userId,
       authorName: currentSession.displayName,
       authorRole: currentSession.role,
@@ -225,6 +241,66 @@ export default function WriteBlog() {
                   </p>
                 )}
               </div>
+              <fieldset
+                className="border-t border-slate-200 pt-6 dark:border-slate-700"
+                aria-describedby="cover-image-help"
+              >
+                <legend
+                  id="cover-image-heading"
+                  className="text-base font-semibold text-slate-900 dark:text-slate-100"
+                >
+                  Cover image (optional)
+                </legend>
+                <p
+                  id="cover-image-help"
+                  className="mt-2 text-sm text-slate-600 dark:text-slate-300"
+                >
+                  Choose a free image or upload your own. A new choice replaces
+                  the current cover.
+                </p>
+                <div className="mt-4 space-y-4">
+                  <ImagePicker
+                    mode="single"
+                    value={coverImage}
+                    onChange={setCoverImage}
+                  />
+                  <ImageUpload
+                    mode="single"
+                    value={coverImage}
+                    onChange={setCoverImage}
+                  />
+                </div>
+              </fieldset>
+              <fieldset
+                className="border-t border-slate-200 pt-6 dark:border-slate-700"
+                aria-describedby="gallery-help"
+              >
+                <legend
+                  id="gallery-heading"
+                  className="text-base font-semibold text-slate-900 dark:text-slate-100"
+                >
+                  Image gallery (optional)
+                </legend>
+                <p
+                  id="gallery-help"
+                  className="mt-2 text-sm text-slate-600 dark:text-slate-300"
+                >
+                  Select or upload multiple images. Free images and uploads can
+                  be used together.
+                </p>
+                <div className="mt-4 space-y-4">
+                  <ImagePicker
+                    mode="multi"
+                    value={gallery}
+                    onChange={setGallery}
+                  />
+                  <ImageUpload
+                    mode="multi"
+                    value={gallery}
+                    onChange={setGallery}
+                  />
+                </div>
+              </fieldset>
               {feedback && (
                 <p
                   className="text-sm font-medium text-rose-700 dark:text-rose-300"
