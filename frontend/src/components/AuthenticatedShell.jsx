@@ -44,6 +44,7 @@ export default function AuthenticatedShell({ children, session }) {
             <NavLink to="/blogs" className={linkClass}>Stories</NavLink>
             <NavLink to="/write" className={linkClass}>Write</NavLink>
             {session.role === 'Admin' && <NavLink to="/admin" className={linkClass}>Admin</NavLink>}
+            {session.role === 'Admin' && <NavLink to="/users" className={linkClass}>User management</NavLink>}
             <Avatar displayName={session.displayName} role={session.role} />
             <button type="button" className="text-sm font-medium text-slate-600 hover:text-slate-950" onClick={handleLogout}>Log out</button>
           </nav>
@@ -54,6 +55,7 @@ export default function AuthenticatedShell({ children, session }) {
               <NavLink to="/blogs" className={linkClass} onClick={() => setIsMenuOpen(false)}>Stories</NavLink>
               <NavLink to="/write" className={linkClass} onClick={() => setIsMenuOpen(false)}>Write</NavLink>
               {session.role === 'Admin' && <NavLink to="/admin" className={linkClass} onClick={() => setIsMenuOpen(false)}>Admin</NavLink>}
+              {session.role === 'Admin' && <NavLink to="/users" className={linkClass} onClick={() => setIsMenuOpen(false)}>User management</NavLink>}
               <button type="button" className="w-fit text-sm font-medium text-slate-600" onClick={handleLogout}>Log out</button>
             </div>
           </nav>

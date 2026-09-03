@@ -1,0 +1,149 @@
+import { useCallback, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import AuthenticatedShell from '../components/AuthenticatedShell';
+import { getSession } from '../utils/auth';
+import { getPosts, getUsers, savePosts } from '../utils/storage';
+import { formatPostDate, sortPostsNewestFirst } from '../utils/blog';
+
+/**
+ * Read all dashboard data without trusting the current component state.
+ *
+ * Returns:
+ *   Fresh local posts and users.
+ */
+function readDashboardData() {
+  return {
+    posts: sortPostsNewestFirst(getPosts()),
+    users: getUsers(),
+  };
+}
+
+/**
+ * Render administrative statistics and recent post controls.
+ *
+ * Returns:
+ *   The authenticated administration dashboard.
+ */
+export default function AdminDashboard() {
+  const session = getSession();
+  const [data, setData] = useState({ posts: [], users: [] });
+  const [feedback, setFeedback] = useState('');
+
+  /** Refresh dashboard state from the safe local storage helpers. */
+  const refresh = useCallback(() => {
+    setData(readDashboardData());
+  }, []);
+
+  useEffect(() => {
+    refresh();
+  }, [refresh]);
+
+  /**
+   * Delete a recent post after fresh administrator validation and confirmation.
+   *
+   * Args:
+   *   postId: The persisted post identifier to remove.
+   * Returns:
+   *   Nothing.
+   */
+  function handleDelete(postId) {
+    setFeedback('');
+    const currentSession = getSession();
+    if (!currentSession || currentSession.role !== 'Admin') {
+      setFeedback('Only an administrator can delete posts.');
+      return;
+    }
+
+    const currentPosts = getPosts();
+    const target = currentPosts.find((post) => post && post.id === postId);
+    if (!target) {
+      setFeedback('This post is no longer available.');
+      refresh();
+      return;
+    }
+    if (!window.confirm(`Delete “${target.title || 'this post'}”? This cannot be undone.`)) return;
+
+    const nextPosts = currentPosts.filter((post) => !post || post.id !== postId);
+    if (!savePosts(nextPosts)) {
+      setFeedback('Unable to delete this post. Please try again.');
+      return;
+    }
+
+    setFeedback('Post deleted.');
+    refresh();
+  }
+
+  if (!session) return null;
+
+  const storedAdmins = data.users.filter((user) => user && user.role === 'Admin').length;
+  const storedUsers = data.users.filter((user) => user && user.role !== 'Admin').length;
+  const statistics = [
+    { label: 'Total Posts', value: data.posts.length },
+    { label: 'Total Users', value: data.users.length + 1 },
+    { label: 'Total Admins', value: storedAdmins + 1 },
+    { label: 'Total users', value: storedUsers },
+  ];
+  const recentPosts = data.posts.slice(0, 5);
+
+  return (
+    <AuthenticatedShell session={session}>
+      <section className="mx-auto max-w-6xl px-5 py-12 sm:px-8">
+        <div className="flex flex-wrap items-end justify-between gap-5">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-700">Administration</p>
+            <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">Admin dashboard</h1>
+            <p className="mt-3 max-w-2xl text-slate-600">Review local publishing activity and manage the WriteSpace community.</p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <Link to="/write" className="rounded-md bg-indigo-700 px-4 py-2.5 text-sm font-semibold text-white hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2">Write a story</Link>
+            <Link to="/users" className="rounded-md border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-800 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2">Manage users</Link>
+          </div>
+        </div>
+
+        <dl className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {statistics.map((statistic) => (
+            <div key={statistic.label} className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+              <div className="h-1 bg-gradient-to-r from-violet-600 to-indigo-600" />
+              <div className="p-5">
+                <dt className="text-sm font-medium text-slate-600">{statistic.label}</dt>
+                <dd className="mt-2 text-3xl font-semibold tabular-nums tracking-tight text-slate-950">{statistic.value}</dd>
+              </div>
+            </div>
+          ))}
+        </dl>
+
+        <section className="mt-10 rounded-lg border border-slate-200 bg-white" aria-labelledby="recent-posts-heading">
+          <div className="flex items-center justify-between gap-4 border-b border-slate-200 px-6 py-5">
+            <div>
+              <h2 id="recent-posts-heading" className="text-xl font-semibold tracking-tight text-slate-950">Recent posts</h2>
+              <p className="mt-1 text-sm text-slate-600">The five newest locally saved posts.</p>
+            </div>
+            <button type="button" className="text-sm font-semibold text-indigo-700 hover:text-indigo-900" onClick={refresh}>Refresh</button>
+          </div>
+          {feedback && <p className="mx-6 mt-5 text-sm font-medium text-slate-700" role="status">{feedback}</p>}
+          {recentPosts.length === 0 ? (
+            <p className="px-6 py-10 text-sm text-slate-600">No posts are available.</p>
+          ) : (
+            <ul className="divide-y divide-slate-200" aria-label="Recent posts">
+              {recentPosts.map((post) => (
+                <li key={post.id} className="flex flex-wrap items-center justify-between gap-4 px-6 py-5">
+                  <div className="min-w-0">
+                    <h3 className="truncate font-semibold text-slate-950">{post.title || 'Untitled post'}</h3>
+                    <p className="mt-1 text-sm text-slate-600">{post.authorName || 'Unknown author'} · {formatPostDate(post.createdAt) || 'Unknown date'}</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Link to={`/edit/${post.id}`} className="rounded-md border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100">Edit</Link>
+                    <button type="button" className="rounded-md border border-rose-300 px-3 py-2 text-sm font-semibold text-rose-700 hover:bg-rose-50" onClick={() => handleDelete(post.id)}>Delete</button>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      </section>
+    </AuthenticatedShell>
+  );
+}
+
+AdminDashboard.propTypes = {};

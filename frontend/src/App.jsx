@@ -2,7 +2,9 @@ import PropTypes from 'prop-types';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import AuthenticatedShell from './components/AuthenticatedShell';
 import ProtectedRoute from './components/ProtectedRoute';
+import AdminDashboard from './pages/AdminDashboard';
 import Home from './pages/Home';
+import UserManagement from './pages/UserManagement';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
 import ReadBlog from './pages/ReadBlog';
@@ -51,8 +53,8 @@ export default function App() {
       <Route path="/blog/:id" element={<ProtectedRoute><ReadBlog /></ProtectedRoute>} />
       <Route path="/write" element={<ProtectedRoute><WriteBlog /></ProtectedRoute>} />
       <Route path="/edit/:id" element={<ProtectedRoute><WriteBlog /></ProtectedRoute>} />
-      <Route path="/admin" element={<ProtectedRoute role="Admin"><ProtectedPlaceholder title="Admin" /></ProtectedRoute>} />
-      <Route path="/users" element={<ProtectedRoute role="Admin"><ProtectedPlaceholder title="User management" /></ProtectedRoute>} />
+      <Route path="/admin" element={<ProtectedRoute role="Admin"><AdminDashboard /></ProtectedRoute>} />
+      <Route path="/users" element={<ProtectedRoute role="Admin"><UserManagement /></ProtectedRoute>} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
